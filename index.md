@@ -7,6 +7,11 @@
 [Time Series Forcasting](/sample_page)
 <img src="images/project1.PNG?raw=true"/>
 
+---
+[Training Universe](https://github.com/h-sami-ullah/training-universe/tree/main)
+<img src="https://github.com/h-sami-ullah/h-sami-ullah.github.io/blob/master/images/Screenshot%202024-06-17%20212209.png?raw=true"/>
+
+---
 
 ---
 [Semantic Segmentation](https://github.com/h-sami-ullah/Deep-Learning-in-Computer-Vision/tree/main/Semantic%20Segmentation)
