@@ -4,15 +4,41 @@
 
 ### Machine Learning | Deep Learning | Computer Vision
 
+
+[Training Universe](https://github.com/h-sami-ullah/training-universe/tree/main)
+## 1. Project Overview
+This project aims to develop a machine learning model that 
+predicts the busyness of geographical regions based on courier locations 
+during food collection at restaurants. Utilizing geolocation data and h3 
+hexagons for regional definition, this model provides insights into the 
+activity levels of different areas, assisting in optimizing logistics and 
+operations for delivery services.
+## 2. Implementation Details
+The project is structured around four main components:
+- `data_collection.py`: Basic handler for data loading
+- `feature_generation.py`: Feature Extractor modules.
+- `training.py`: Training Entry Point
+- `prediction.py`: Manages the prediction process using the trained model.
+
+Additionally, the project incorporates:
+- A configuration system for easy management of model parameters and settings.
+- Dependency management to ensure consistent environments across development and production.
+- It uses below tech stack
+  - `Docker` for containerization
+  - `AWS S3` for data storage
+  - `Bitbucket` for CI/CD
+  - `Local` runner for pipline execution 
+  - `DVC` for data versioning
+  - `Neptune` for Experiment Tracking
+  - `ECS` for API hosting
+<img src="https://github.com/h-sami-ullah/h-sami-ullah.github.io/blob/master/images/Screenshot%202024-06-17%20212209.png?raw=true"/>
+---
+
+---
 [Time Series Forcasting](/sample_page)
 <img src="images/project1.PNG?raw=true"/>
 
 ---
-[Training Universe](https://github.com/h-sami-ullah/training-universe/tree/main)
-<img src="https://github.com/h-sami-ullah/h-sami-ullah.github.io/blob/master/images/Screenshot%202024-06-17%20212209.png?raw=true"/>
-
----
-
 ---
 [Semantic Segmentation](https://github.com/h-sami-ullah/Deep-Learning-in-Computer-Vision/tree/main/Semantic%20Segmentation)
 <img src="https://github.com/h-sami-ullah/Deep-Learning-in-Computer-Vision/blob/45760f7ea2f399a8426f2116dee92742627ee004/Semantic%20Segmentation/bais4-3073715-large.gif?raw=true"/>
