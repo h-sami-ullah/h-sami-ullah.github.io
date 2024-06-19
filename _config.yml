@@ -1,10 +1,10 @@
-title: Samiullah # your name (or website title) here
+title: Hafiz Samiullah # your name (or website title) here
 logo: "/images/urc.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Computer Vision & AI Expert | Software Developer | Data Scientist 
+  Machine Learning & AI Engineer | Data Scientist | Computer Vision Engineer
   <br><br>
   
-  <a href="https://www.linkedin.com/in/hafiz-sami-ullah-18474a111/">View My LinkedIn Profile</a> 
+  <a href="https://www.linkedin.com/in/hsamiullah/">View My LinkedIn Profile</a> 
   
 theme: jekyll-theme-minimal
 google_analytics: G-64YT8FEYF8 # your Google Analytics tracking ID here
