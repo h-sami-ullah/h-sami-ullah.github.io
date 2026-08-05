@@ -130,19 +130,19 @@ td img {
 <body>
 <div id="header" >
 <div id="headersub">
-<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah (200436456)</span></h1>
+<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah</span></h1>
 </div>
 </div>
 <div class="container">
 
-<h2>Assignment 3: Camera Calibration and Fundamental Matrix Estimation with RANSAC</h2>
+<h2>Project 3: Camera Calibration and Fundamental Matrix Estimation with RANSAC</h2>
 
 
 <img src="ransac33.png" />
 <p style="font-size: 14px"> Figure 1: Epipolar lines using Normalized points and RANSAC</p>
 
 
-<p>&emsp;&emsp;The goal of this assignment is an introduction to camera  and geometry of the scene. We are required to solve the algorithm for camera projection matrix along with the fundamental matrix estimation. Given the task of finding the projection matrix and fundamental matrix estimation this assignment can be sub divided in three categories:
+<p>&emsp;&emsp;The goal of this project is an introduction to camera  and geometry of the scene. We are required to solve the algorithm for camera projection matrix along with the fundamental matrix estimation. Given the task of finding the projection matrix and fundamental matrix estimation this project can be sub divided in three categories:
 
 
 
@@ -159,7 +159,7 @@ I will briefly touch on each of the subcategory and algorithm I used to perform 
 
 <h3 id="L1"><b>Step I</b>: Approximating fundamental matrix and camera centre</h3>
 <p>&emsp;&emsp;
-The first step of this assignment is to find the 3-D world to 2-D transformation. We have 2-D image position and 3-D camera position. Fundamental matrix is nothing but the relation between the 3-D mapping to the 2-D scene. The homogeneous coordinates of the equation for mapping from 3-D real world scene to 2-D camera coordinates is shown below:
+The first step of this project is to find the 3-D world to 2-D transformation. We have 2-D image position and 3-D camera position. Fundamental matrix is nothing but the relation between the 3-D mapping to the 2-D scene. The homogeneous coordinates of the equation for mapping from 3-D real world scene to 2-D camera coordinates is shown below:
 
 
 
@@ -430,7 +430,7 @@ The below routine we perfom the second step of fundamental matrix estimation i.e
 
 <h3 id="L3"><b>Step III:</b>Fundamental matrix estimation using RANSAC</h3>
 <p>&emsp;&emsp;
-The last part of this assignment is to use RANSAC and target the computational cost using fundamental matrix. Although the SIFT pipeline is good and may perform well but we may have errors and it is very challenging to determine the outliers. The best fit can be achieved using RANSAC which is random sample consensus. We have option of choosing 8-12 correspondences of random samples. I have selected this value to be 8 samples. Now with this random correspondence of samples number of inliers are counted. Number of iterations are performed until the threshold is achieved. The best fundamental matrix is chosen based on most inliers. The threshold is set to 0.01 and number of iterations are chosen to be 15000. Below is the code routine of with comments to improve the readability. 
+The last part of this project is to use RANSAC and target the computational cost using fundamental matrix. Although the SIFT pipeline is good and may perform well but we may have errors and it is very challenging to determine the outliers. The best fit can be achieved using RANSAC which is random sample consensus. We have option of choosing 8-12 correspondences of random samples. I have selected this value to be 8 samples. Now with this random correspondence of samples number of inliers are counted. Number of iterations are performed until the threshold is achieved. The best fundamental matrix is chosen based on most inliers. The threshold is set to 0.01 and number of iterations are chosen to be 15000. Below is the code routine of with comments to improve the readability. 
 
 </p>
 

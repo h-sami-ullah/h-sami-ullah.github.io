@@ -130,19 +130,19 @@ td img {
 <body>
 <div id="header" >
 <div id="headersub">
-<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah (200436456)</span></h1>
+<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah</span></h1>
 </div>
 </div>
 <div class="container">
 
-<h2>Assignment 2: Local Feature Matching</h2>
+<h2>Project 2: Local Feature Matching</h2>
 
 <div style="float: right; padding: 20px">
 <img src="../results/vis_circles_2.jpg" width="80%" />
 <p style="font-size: 14px">Fig 1: Notre Dame feature matching with accuracy 86%.</p>
 </div>
 
-<p>&emsp;&emsp;The goal of this assignment is to answer the question below :
+<p>&emsp;&emsp;The goal of this project is to answer the question below :
 
 <ol><b>Question:</b> Given a pair of images how can someone find and match the features in both images. What kind of features one should look for? Are the chosen features are enough to describe some view in a set of images?
 </ol>
@@ -150,9 +150,9 @@ td img {
 <ol> <b>Answer:</b> A simple answer is finding the corners in the image and use distance as a similarity matrix to find the maximum similar keypoint.
  </ol>
 
-A long answer is finding the features and then use feature selecting mechanism to rectify the variant features to match from. This leads us to a question of “how do we find the features? This is indeed the first task of our assignment. 
+A long answer is finding the features and then use feature selecting mechanism to rectify the variant features to match from. This leads us to a question of “how do we find the features? This is indeed the first task of our project. 
 Implementing Harris Corner Detector, Harris corner is nothing but a detector of a junction of two edges. This junction is called corner. An edge is basically a sudden change in brightness of the image. As we want features to be invariant when we change the angle of capturing a same view. Corner does that for us. Generally, corner is considered as a feature point invariant to illumination, translation, and rotation in an image. But the role of corner becomes hard to understand for a changing scale. A corner for an image at one scale can be an edge for the same image at different scale (lower scale). SIFT comes into ground to solve this problem. The theory is finding the features from a different scale space may change the view of features. Given an image one can find  Difference of Gaussian (DoG) from a scaled version of the image. It is approximately same as finding the Laplacian of Gaussian (LoG), a computationally expensive algorithm. Then a search is performed in pyramid scale space to look for extrema, either  maxima or minima. The next step is keypoint localization and assigning orientation. The last step in finding features is to generate a keypoint descriptor which has 128 bins representing a 16*16 neighbourhood. Matching comes after we have extracted features. These features are matched based on nearest neighbour algorithm. The ratio of closest to second closet feature is taken and threshold is set to eliminate the false positives. 
-Before diving deep into the implementation, I have list down the key component of this assignment:
+Before diving deep into the implementation, I have list down the key component of this project:
 
 <ol><b>Step I:</b> Interest point detection </ol>
 <ol><b>Step II:</b> Local feature description </ol>
@@ -543,7 +543,7 @@ but still perform reasonablly. In the figure below I have attached some final re
 </p>
 <h3>Conclusion</h3>
 <p>
-&emsp;&emsp;In this assignment the goal was to understand image using features. The features should be distinctive and should be unique. I did not focus on scale variance. The selected features are not scale invariant which is easily achievable if one can implement the difference of gaussian space. From this work I learned that images have distinctive location which are unique even the angel of capturing image changes. In term of application one can think of building an image recognition mechanism built on top of these feature extractor. 
+&emsp;&emsp;In this project the goal was to understand image using features. The features should be distinctive and should be unique. I did not focus on scale variance. The selected features are not scale invariant which is easily achievable if one can implement the difference of gaussian space. From this work I learned that images have distinctive location which are unique even the angel of capturing image changes. In term of application one can think of building an image recognition mechanism built on top of these feature extractor. 
 
 
 

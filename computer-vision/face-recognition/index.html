@@ -130,16 +130,16 @@ td img {
 <body>
 <div id="header" >
 <div id="headersub">
-<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah (200436456)</span></h1>
+<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah</span></h1>
 </div>
 </div>
 <div class="container">
 
-<h2>Assignment 5: Face Detection with a Sliding Window</h2>
+<h2>Project 5: Face Detection with a Sliding Window</h2>
 
 
 <h3><b>Introduction</b>: </h3>
-<p>&emsp;&emsp;This assignment is implementation of sliding window face detection algorithm. The first part of this assignment is to extract features and generate a corresponding label for positive and negative class each. The next step is training a machine learning based model to perform classification task. Mainly this assignment is divided in following sections:
+<p>&emsp;&emsp;This project is implementation of sliding window face detection algorithm. The first part of this project is to extract features and generate a corresponding label for positive and negative class each. The next step is training a machine learning based model to perform classification task. Mainly this project is divided in following sections:
 
 
 
@@ -155,7 +155,7 @@ td img {
 
 <h3 id="L1"><b>Step I</b>: Feature extraction for positive and negative examples</h3>
 <p>&emsp;&emsp;
-In this assignment, Histogram of Gradients (HoG) is used as features. First, we extract features from positive examples, the one with faces, and then we extract features for negative examples. HoG is a feature descriptor mainly used to extract features from the data. It breaks image in small portion and calculates orientation at localized portion. There are different design parameters for HoG, one can select different cell size or number of orientations which at the end makes features rich or of poor quality. For this assignment I have used cell_size of 6. The image window used to extract features is chosen to be 36. So, if the image is bigger than 36x36, either one can scale it down or convert it into tiles to get a 36x36 window. Given the limitations of having a smaller number of examples one can target different feature manipulation mechanism to get more examples of dataset. One way of manipulating is augmenting the dataset. For example, if there is a face, it will still have same visual representation if we flip it in any direction. Blurring the image, cropping, and squeezing the image are some of the operations which give a greater number of examples to learn from. The other possible way to look at this is extracting the features at multiple scale to get a better representation of the dataset. Using more scales mean increasing time required for feature extraction. I have used Hog descriptor for image and its mirror in case of positive examples, whereas for negative examples a scale space is chosen to extract the feature. The below table shows some comparison on model performance for different scales of images. 
+In this project, Histogram of Gradients (HoG) is used as features. First, we extract features from positive examples, the one with faces, and then we extract features for negative examples. HoG is a feature descriptor mainly used to extract features from the data. It breaks image in small portion and calculates orientation at localized portion. There are different design parameters for HoG, one can select different cell size or number of orientations which at the end makes features rich or of poor quality. For this project I have used cell_size of 6. The image window used to extract features is chosen to be 36. So, if the image is bigger than 36x36, either one can scale it down or convert it into tiles to get a 36x36 window. Given the limitations of having a smaller number of examples one can target different feature manipulation mechanism to get more examples of dataset. One way of manipulating is augmenting the dataset. For example, if there is a face, it will still have same visual representation if we flip it in any direction. Blurring the image, cropping, and squeezing the image are some of the operations which give a greater number of examples to learn from. The other possible way to look at this is extracting the features at multiple scale to get a better representation of the dataset. Using more scales mean increasing time required for feature extraction. I have used Hog descriptor for image and its mirror in case of positive examples, whereas for negative examples a scale space is chosen to extract the feature. The below table shows some comparison on model performance for different scales of images. 
 
 
 <style type="text/css">
@@ -369,7 +369,7 @@ The code below extracts the features at different scales of image for negative e
 
 <h3 id="L2"><b>Step II</b>: Training a classifier and fine tuning</h3>
 <p>&emsp;&emsp;
-This part of the assignment is mainly related to using the features to learn mapping from image to its class i.e., face or non-face. The design parameter C is required along with the X, the examples, and Y, the output label. In this part I have used Linear support vector machine to learn X to Y mapping. The C is regularization parameter, it specifies the strength of the regularization with inverse proportion to its value. The value of C can not be negative. The value of C is decided after experimenting with multiple thresholds. The below table gives a bird eye view of model evaluation for different values of C.
+This part of the project is mainly related to using the features to learn mapping from image to its class i.e., face or non-face. The design parameter C is required along with the X, the examples, and Y, the output label. In this part I have used Linear support vector machine to learn X to Y mapping. The C is regularization parameter, it specifies the strength of the regularization with inverse proportion to its value. The value of C can not be negative. The value of C is decided after experimenting with multiple thresholds. The below table gives a bird eye view of model evaluation for different values of C.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
@@ -525,7 +525,7 @@ Below is the code for initializing and training the model using the positive and
 
 <h3 id="L3"><b>Step III</b>:Developing a face detector powered with a Support Vector Classifier</h3>
 <p>&emsp;&emsp;
-This  part of the assignment deals  with detection of faces in each image. The first step is to create non-overlapping tiles from the input image, this input image tile is passed through HoG feature extractor and resultant is fed to SVC for classification. This task is  done for  multiple scales and then non-maxima suppression is used to get rid of repeated detection along with getting most confident detection.  
+This  part of the project deals  with detection of faces in each image. The first step is to create non-overlapping tiles from the input image, this input image tile is passed through HoG feature extractor and resultant is fed to SVC for classification. This task is  done for  multiple scales and then non-maxima suppression is used to get rid of repeated detection along with getting most confident detection.  
 The code routine below shows the detection and saving of the results:
 </p>
 
@@ -772,7 +772,7 @@ The results for different figures are attached in the below figures:
 <h3 id="L5"><b>Conclusion:</b></h3>
 
 <p>&emsp;&emsp;
-In this assignment, the main goal was to use manual feature extraction methods to train support vector classifier. Non maximal suppression is used to detect the best outcome. It is evident from the tables above that playing with parameters make big difference on accuracy. Using small step size leads to more average precision but also more false positives. Instead of choosing zero as threshold choosing threshold towards -ve class does help in getting good decision boundary for the end task of maximal suppression. Also, giving more top detection to Non-max-suppression will leads to more false positives. Its seems that giving 100 top detections works better. Using more top detections may cause trouble for the true positive to be thrown out.</p>
+In this project, the main goal was to use manual feature extraction methods to train support vector classifier. Non maximal suppression is used to detect the best outcome. It is evident from the tables above that playing with parameters make big difference on accuracy. Using small step size leads to more average precision but also more false positives. Instead of choosing zero as threshold choosing threshold towards -ve class does help in getting good decision boundary for the end task of maximal suppression. Also, giving more top detection to Non-max-suppression will leads to more false positives. Its seems that giving 100 top detections works better. Using more top detections may cause trouble for the true positive to be thrown out.</p>
 
 
 

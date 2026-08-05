@@ -130,16 +130,16 @@ td img {
 <body>
 <div id="header" >
 <div id="headersub">
-<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah (200436456)</span></h1>
+<h1><span style="color: #DE3737">Name: Hafiz Sami Ullah</span></h1>
 </div>
 </div>
 <div class="container">
 
-<h2>Assignment 4: Scene Recognition with Bag-of-Words</h2>
+<h2>Project 4: Scene Recognition with Bag-of-Words</h2>
 
 
 <h3><b>Introduction</b>: </h3>
-<p>&emsp;&emsp;This assignment primarily focusses on image classification task using bag-of-words scheme. The bag-of-words technique involves obtaining a visual dictionary through unsupervised/supervised mechanism. There are multiple ways one can achieve this goal e.g., the dictionary can be made up of HOG backend or may be SIFT backend features. The scheme is to first find the local features using SIFT/HOG or any other local feature extractor, and then using these feature vector extracts representative vector as words from these local features. In this assignment K-means clustering is used to find the cluster centres. Once the clustering is done and we have centre of the clusters as vocabulary. To give a bigger picture, the goal of this assignment is to explore the possible combination of feature representation method and classification approach for a dataset having 15 different classes. The assignment starts with creating tiny images from large sized images. These are used as features dictionary and used to predict query using nearest neighbour algorithm. Then the comparison is made with features extracted using SIFT feature extractor. This assignment also focusses on using linear Support vector machine for multiclass classification. Overall, the main deliverables of this assignment are:
+<p>&emsp;&emsp;This project primarily focusses on image classification task using bag-of-words scheme. The bag-of-words technique involves obtaining a visual dictionary through unsupervised/supervised mechanism. There are multiple ways one can achieve this goal e.g., the dictionary can be made up of HOG backend or may be SIFT backend features. The scheme is to first find the local features using SIFT/HOG or any other local feature extractor, and then using these feature vector extracts representative vector as words from these local features. In this project K-means clustering is used to find the cluster centres. Once the clustering is done and we have centre of the clusters as vocabulary. To give a bigger picture, the goal of this project is to explore the possible combination of feature representation method and classification approach for a dataset having 15 different classes. The project starts with creating tiny images from large sized images. These are used as features dictionary and used to predict query using nearest neighbour algorithm. Then the comparison is made with features extracted using SIFT feature extractor. This project also focusses on using linear Support vector machine for multiclass classification. Overall, the main deliverables of this project are:
 
 
 
@@ -154,7 +154,7 @@ td img {
 
 <h3 id="L1"><b>Step I</b>: Large Image to tiny Images as features</h3>
 <p>&emsp;&emsp;
-In this part of the assignment the task is to read the images and build feature map from each image. Instead of performing different manipulations on images, this step just resizes the images and build a feature vector for each of the class. I consider the resize image to be 16x16 and it is done for all the images (1500 total images). 
+In this part of the project the task is to read the images and build feature map from each image. Instead of performing different manipulations on images, this step just resizes the images and build a feature vector for each of the class. I consider the resize image to be 16x16 and it is done for all the images (1500 total images). 
 Below code snip is discussed to perform the above-described task. 
 
 <pre><code><p><b>Reading Images and resizing the image</b>
@@ -595,7 +595,7 @@ It is evident from the resutls that using enriched vocabulary leads to more prom
 
 <h3 id="L5"><b>Conclusion:</b></h3>
 
-<p>&emsp;&emsp; To sum up, using feature extrator to learn classification task is more helpful as compare to using the low resolution image itself. The reason is SVM, and Nearest Neighbour does not explicitly extract features to learn the task. SVM just learns the slope and intercept to draw a boundary between the interest and not interest class. The support vector machine is good as compare to nearest neighbour because if we have more examples for training the NN will be worse on computation. For one query, it must go through the all the possible training examples. In case of SVM, once we have boundary parameters we can just multiply and get the resultant class. This assignment shows that the SVM not only time but also accuracy efficient. </p>
+<p>&emsp;&emsp; To sum up, using feature extrator to learn classification task is more helpful as compare to using the low resolution image itself. The reason is SVM, and Nearest Neighbour does not explicitly extract features to learn the task. SVM just learns the slope and intercept to draw a boundary between the interest and not interest class. The support vector machine is good as compare to nearest neighbour because if we have more examples for training the NN will be worse on computation. For one query, it must go through the all the possible training examples. In case of SVM, once we have boundary parameters we can just multiply and get the resultant class. This project shows that the SVM not only time but also accuracy efficient. </p>
 
 </body>
 </html>
