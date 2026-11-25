@@ -241,7 +241,16 @@ section[id] {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(320px, .82fr);
   gap: 64px;
-  align-items: center;
+  align-items: start;
+}
+
+.hero-copy {
+  order: 1;
+}
+
+.hero-panel {
+  order: 2;
+  align-self: end;
 }
 
 .eyebrow,
@@ -285,7 +294,7 @@ section[id] {
 .hero h1 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(4rem, 10vw, 8.6rem);
+  font-size: clamp(3.2rem, 6.8vw, 6.4rem);
   line-height: .82;
   letter-spacing: -.075em;
   text-transform: uppercase;
@@ -299,7 +308,7 @@ section[id] {
   max-width: 17ch;
   margin: 30px 0 16px;
   font-family: var(--display);
-  font-size: clamp(1.6rem, 3vw, 2.65rem);
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
   line-height: 1.05;
   letter-spacing: -.035em;
 }
@@ -425,7 +434,7 @@ section[id] {
 .panel-body h2 {
   margin: 0 0 24px;
   font-family: var(--display);
-  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
   line-height: 1;
   letter-spacing: -.045em;
 }
@@ -454,7 +463,7 @@ section[id] {
 
 .panel-stats dt {
   font-family: var(--display);
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
 }
 
@@ -543,7 +552,7 @@ section[id] {
 .contact-band h2 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(2.5rem, 5.6vw, 4.8rem);
+  font-size: clamp(2rem, 4.2vw, 3.6rem);
   line-height: .92;
   letter-spacing: -.055em;
   text-transform: uppercase;
@@ -618,7 +627,7 @@ section[id] {
 .case-head h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(1.8rem, 3.6vw, 3.1rem);
+  font-size: clamp(1.5rem, 2.7vw, 2.4rem);
   line-height: 1;
   letter-spacing: -.04em;
   text-transform: uppercase;
@@ -642,7 +651,7 @@ section[id] {
 .case-summary {
   margin: 0 0 14px;
   font-family: var(--display);
-  font-size: 21px;
+  font-size: 18px;
   line-height: 1.25;
   letter-spacing: -.02em;
 }
@@ -668,7 +677,7 @@ section[id] {
 
 .case-facts dt {
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1;
   color: var(--card-accent);
 }
@@ -834,7 +843,7 @@ section[id] {
 .report-copy h3 {
   margin: 0 0 5px;
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.1;
   letter-spacing: -.025em;
   text-transform: uppercase;
@@ -981,7 +990,7 @@ section[id] {
 .archive-body h3 {
   margin: 0 0 9px;
   font-family: var(--display);
-  font-size: 23px;
+  font-size: 21px;
   line-height: 1.05;
   letter-spacing: -.03em;
   text-transform: uppercase;
@@ -1027,7 +1036,7 @@ section[id] {
 .publication-row h3 {
   margin: 0 0 6px;
   font-family: var(--display);
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.2;
   letter-spacing: -.02em;
 }
@@ -1075,7 +1084,7 @@ section[id] {
   gap: 10px;
   margin: 0 0 14px;
   font-family: var(--display);
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -1119,7 +1128,7 @@ section[id] {
 .contact-band p {
   max-width: 62ch;
   margin: 18px 0 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .contact-links {
@@ -1213,7 +1222,7 @@ section[id] {
 
 .page h3 {
   font-family: var(--display);
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .page img {
@@ -1260,8 +1269,15 @@ section[id] {
     grid-template-columns: 1fr;
   }
 
+  .hero-copy {
+    order: 1;
+  }
+
   .hero-panel {
+    order: 2;
+    align-self: auto;
     max-width: 620px;
+    margin-top: 12px;
   }
 
   .section-head {
@@ -1350,7 +1366,7 @@ section[id] {
   }
 
   .hero h1 {
-    font-size: clamp(3.4rem, 16vw, 5.2rem);
+    font-size: clamp(2.8rem, 12vw, 4rem);
   }
 
   .section {
@@ -1405,7 +1421,7 @@ section[id] {
   }
 
   .hero h1 {
-    font-size: 3.25rem;
+    font-size: 2.8rem;
   }
 
   .panel-body {
