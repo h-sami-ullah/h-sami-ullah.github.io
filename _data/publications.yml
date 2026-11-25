@@ -1,0 +1,17 @@
+- year: "2022"
+  title: "Evaluation of model generalization for growing plants using conditional learning"
+  venue: "Artificial Intelligence in Agriculture"
+  link_label: "doi.org/10.1016/j.aiia.2022.09.006"
+  url: "https://doi.org/10.1016/j.aiia.2022.09.006"
+
+- year: "2021"
+  title: "End to End Segmentation of Canola Field Images Using Dilated U-Net"
+  venue: "IEEE Access, vol. 9, pp. 59741-59753"
+  link_label: "ieeexplore.ieee.org/document/9405989"
+  url: "https://ieeexplore.ieee.org/document/9405989"
+
+- year: "2021"
+  title: "Multi-Modal Anomaly Detection by Using Audio and Visual Cues"
+  venue: "IEEE Access, vol. 9, pp. 30587-30603"
+  link_label: "ieeexplore.ieee.org/document/9354611"
+  url: "https://ieeexplore.ieee.org/document/9354611"

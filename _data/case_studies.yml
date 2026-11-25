@@ -1,0 +1,100 @@
+- title: "Geo-Busyness Predictor"
+  label: "Production ML pipeline"
+  year: "2024"
+  summary: "Predicting regional busyness from courier location data during food collection."
+  detail: "Rebuilt a proof of concept into a modular, testable system that turns courier GPS pings into h3 geospatial features, tracks experiments, and deploys the pipeline through AWS and containers."
+  media_type: "image"
+  image: "images/Screenshot 2024-06-17 212209.png"
+  image_alt: "Geo-Busyness Predictor pipeline interface"
+  facts:
+    - value: "h3"
+      label: "geospatial index"
+    - value: "AWS"
+      label: "S3 and ECS"
+    - value: "CI/CD"
+      label: "Bitbucket Pipelines"
+  tech:
+    - "Docker"
+    - "AWS S3"
+    - "ECS"
+    - "DVC"
+    - "Neptune"
+    - "Bitbucket Pipelines"
+  links:
+    - label: "View repository"
+      url: "https://github.com/h-sami-ullah/training-universe"
+      primary: true
+    - label: "Documentation"
+      url: "https://github.com/h-sami-ullah/training-universe/tree/main"
+
+- title: "Product Classifier Optimization"
+  label: "Model deployment and optimization"
+  year: "2024"
+  summary: "Optimizing a ResNet18 product classifier for low-latency deployment with PyTorch, ONNX, pruning, and quantization."
+  detail: "Benchmarked FP32, pruned, static INT8, and quantization-aware training paths, then compared accuracy, model size, latency, and throughput under ONNX Runtime."
+  media_type: "benchmark"
+  facts:
+    - value: "3.4ms"
+      label: "best per-image latency"
+    - value: "96.5%"
+      label: "QAT accuracy"
+    - value: "10.8MB"
+      label: "optimized model"
+    - value: "264/s"
+      label: "peak throughput"
+  benchmarks:
+    - label: "FP32 PyTorch"
+      width: 100
+      time: "14.6ms"
+    - label: "Pruned L1"
+      width: 95
+      time: "13.9ms"
+    - label: "Static INT8"
+      width: 37
+      time: "5.4ms"
+    - label: "QAT INT8 ONNX"
+      width: 26
+      time: "3.8ms"
+    - label: "Static INT8 ONNX"
+      width: 23
+      time: "3.4ms"
+  tech:
+    - "PyTorch"
+    - "ONNX"
+    - "INT8"
+    - "QAT"
+    - "Pruning"
+    - "ONNX Runtime"
+  links:
+    - label: "View repository"
+      url: "https://github.com/h-sami-ullah/classifier-optimization"
+      primary: true
+    - label: "Documentation"
+      url: "https://github.com/h-sami-ullah/classifier-optimization/tree/main/docs"
+
+- title: "Scene Recognition with Bag-of-Words"
+  label: "Computer vision research"
+  year: "2021"
+  summary: "Classifying 15 scene categories using SIFT features, visual words, nearest neighbours, and one-vs-all SVMs."
+  detail: "Built a complete bag-of-visual-words pipeline, compared feature vocabulary sizes, and evaluated nearest-neighbour and SVM classifiers across a 15-class scene dataset."
+  media_type: "image"
+  image: "computer-vision/scene-recognition/bow_svm.png"
+  image_alt: "Confusion matrix for bag-of-words scene recognition"
+  facts:
+    - value: "15"
+      label: "scene classes"
+    - value: "2"
+      label: "classifier families"
+    - value: "SIFT"
+      label: "local features"
+  tech:
+    - "SIFT"
+    - "Bag-of-Words"
+    - "Nearest Neighbour"
+    - "Linear SVM"
+  links:
+    - label: "Open report"
+      url: "computer-vision/scene-recognition/index.html"
+      primary: true
+    - label: "All reports"
+      url: "computer-vision/index.html"

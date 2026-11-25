@@ -1,33 +1,31 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Computer Vision Project</title>
-<link href='http://fonts.googleapis.com/css?family=Nunito:300|Crimson+Text|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" title="Default" href="styles/github.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
-
+<title>Local Feature Matching</title>
+<link rel="stylesheet" href="../../assets/css/report.css">
 <link rel="stylesheet" href="highlighting/styles/default.css">
 <script src="highlighting/highlight.pack.js"></script>
 
 <style type="text/css">
 body {
 	margin: 0px;
-	width: 110%;
-	font-family: 'Crimson Text', serif;
+	width: 100%;
+	font-family: Georgia, serif;
 	font-size: 20px;
-	background: #fcfcfc;
+	background: #f4f1ea;
 }
 h1 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 28px;
 	margin: 25px 0px 0px 0px;
-	text-transform: loIrcase;
+	text-transform: lowercase;
 
 }
 
 h2 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 32px;
 	margin: 15px 0px 35px 0px;
 	color: #333;	
@@ -35,16 +33,16 @@ h2 {
 }
 
 h3 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 26px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
 	word-spacing: 2px;
 }
 h4 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 22px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
@@ -52,8 +50,8 @@ h4 {
 }
 
 h5 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 18px;
 	margin: 10px 0px 10px 0px;
 	color: #111;
@@ -65,22 +63,22 @@ p, li {
 }
 
 a {
-	color: #DE3737;
+	color: #a34328;
 }
 
 .container {
 	margin: 0px auto 0px auto;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 }
 
 #header {
 	background: #333;
-	width: 110%;
+	width: 100%;
 }
 
 #headersub {
 	color: #ccc;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 	margin: 0px auto 0px auto;
 	padding: 20px 0px 20px 0px;
 }
@@ -95,7 +93,7 @@ a {
 }
 .sep {
 	height: 1px;
-	width: 110%;
+	width: 100%;
 	background: #999;
 	margin: 20px 0px 20px 0px;
 }
@@ -103,7 +101,7 @@ a {
 	font-size: 16px;
 }
 .latex {
-	width: 110%;
+	width: 100%;
 }
 
 .latex img {
@@ -112,7 +110,7 @@ a {
 }
 
 pre {
-	font-family: 'Droid Sans Mono';
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 	font-size: 14px;
 }
 
@@ -128,12 +126,13 @@ td img {
 </script>
 </head>
 <body>
+<a class="report-home" href="../index.html">&larr; All reports</a>
 <div class="container">
 
 <h2>Project 2: Local Feature Matching</h2>
 
 <div style="float: right; padding: 20px">
-<img src="results/vis_circles_2.jpg" width="80%" />
+<img alt="Report figure" loading="lazy" src="results/vis_circles_2.jpg" width="80%" />
 <p style="font-size: 14px">Fig 1: Notre Dame feature matching with accuracy 86%.</p>
 </div>
 
@@ -224,15 +223,7 @@ In the above routine we implemented the algorithm described above the routine. T
 </p>
 
 
-<table border=1>
-<tr>
-<td>
-<img src="results/before_ADAP.PNG"  height="400" widht="800"/>
-<img src="results/before_ADAP2.PNG"  height="400" widht="800" />
-</td>
-</tr>
-<p style="font-size: 14px">Fig 2: intrest point detected using Harris Corner detector, the yellow rectangles show high contrast area.</p>
-</table>
+<p style="font-size: 14px">Fig 2: interest points detected using the Harris corner detector; high-contrast regions receive the strongest responses.</p>
 
 <p>&emsp;&emsp;
 One can see there are more intrest points where the image contrast is high, highlighted using yellow rectangles. In the next step the goal to select the evenly distributed intrest points.
@@ -297,8 +288,8 @@ Previously we just look for maxima. As we have already seen that the number of m
 <table border=1>
 <tr>
 <td>
-<img src="results/afteradap1.png" height="400" widht="800"/>
-<img src="results/afteradap2.png" height="400" widht="800"/>
+<img alt="Report figure" loading="lazy" src="results/afteradap1.png" height="400" width="800"/>
+<img alt="Report figure" loading="lazy" src="results/afteradap2.png" height="400" width="800"/>
 </td>
 </tr>
 <p style="font-size: 14px">Fig 3: intrest point detected after ANMS.</p>
@@ -453,8 +444,8 @@ We can do that by finding the distance between the features. If the distance is 
 </code></pre> 
 
 <table border=1>
-<img src="results/vis_circles_2.jpg" style="width:50%;"/>
-<img src="results/vis_lines_2.jpg" style="width:50%;"/>
+<img alt="Report figure" loading="lazy" src="results/vis_circles_2.jpg" style="width:50%;"/>
+<img alt="Report figure" loading="lazy" src="results/vis_lines_2.jpg" style="width:50%;"/>
 <p style="font-size: 14px">Fig 4: Circles and lines representing the features in two different images.</p>
 </table>
 
@@ -470,15 +461,15 @@ but still perform reasonablly. In the figure below I have attached some final re
 </p>
 
 <table border=1>
-<img src="results/vis_circles_3.jpg" style="width:50%;"/>
-<img src="results/vis_lines_3.jpg" style="width:50%;"/>
+<img alt="Report figure" loading="lazy" src="results/vis_circles_3.jpg" style="width:50%;"/>
+<img alt="Report figure" loading="lazy" src="results/vis_lines_3.jpg" style="width:50%;"/>
 <p style="font-size: 14px">Fig 5: Mount Rushmore image matching.</p>
 </table>
 
 
 <table border=1>
-<img src="results/vis_circles_4.jpg" style="width:50%;"/>
-<img src="results/vis_lines_4.jpg" style="width:50%;"/>
+<img alt="Report figure" loading="lazy" src="results/vis_circles_4.jpg" style="width:50%;"/>
+<img alt="Report figure" loading="lazy" src="results/vis_lines_4.jpg" style="width:50%;"/>
 <p style="font-size: 14px">Fig 6: Episcopal Gaudi image matching.</p>
 </table>
 <p>

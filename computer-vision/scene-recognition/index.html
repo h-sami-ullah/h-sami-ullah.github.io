@@ -1,33 +1,31 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Computer Vision Project</title>
-<link href='http://fonts.googleapis.com/css?family=Nunito:300|Crimson+Text|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" title="Default" href="styles/github.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
-
+<title>Scene Recognition with Bag-of-Words</title>
+<link rel="stylesheet" href="../../assets/css/report.css">
 <link rel="stylesheet" href="highlighting/styles/default.css">
 <script src="highlighting/highlight.pack.js"></script>
 
 <style type="text/css">
 body {
 	margin: 0px;
-	width: 110%;
-	font-family: 'Crimson Text', serif;
+	width: 100%;
+	font-family: Georgia, serif;
 	font-size: 20px;
-	background: #fcfcfc;
+	background: #f4f1ea;
 }
 h1 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 28px;
 	margin: 25px 0px 0px 0px;
-	text-transform: loIrcase;
+	text-transform: lowercase;
 
 }
 
 h2 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 32px;
 	margin: 15px 0px 35px 0px;
 	color: #333;	
@@ -35,16 +33,16 @@ h2 {
 }
 
 h3 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 26px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
 	word-spacing: 2px;
 }
 h4 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 22px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
@@ -52,8 +50,8 @@ h4 {
 }
 
 h5 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 18px;
 	margin: 10px 0px 10px 0px;
 	color: #111;
@@ -65,22 +63,22 @@ p, li {
 }
 
 a {
-	color: #DE3737;
+	color: #a34328;
 }
 
 .container {
 	margin: 0px auto 0px auto;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 }
 
 #header {
 	background: #333;
-	width: 110%;
+	width: 100%;
 }
 
 #headersub {
 	color: #ccc;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 	margin: 0px auto 0px auto;
 	padding: 20px 0px 20px 0px;
 }
@@ -95,7 +93,7 @@ a {
 }
 .sep {
 	height: 1px;
-	width: 110%;
+	width: 100%;
 	background: #999;
 	margin: 20px 0px 20px 0px;
 }
@@ -103,7 +101,7 @@ a {
 	font-size: 16px;
 }
 .latex {
-	width: 110%;
+	width: 100%;
 }
 
 .latex img {
@@ -112,7 +110,7 @@ a {
 }
 
 pre {
-	font-family: 'Droid Sans Mono';
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 	font-size: 14px;
 }
 
@@ -128,6 +126,7 @@ td img {
 </script>
 </head>
 <body>
+<a class="report-home" href="../index.html">&larr; All reports</a>
 <div class="container">
 
 <h2>Project 4: Scene Recognition with Bag-of-Words</h2>
@@ -324,7 +323,7 @@ Support vector machine are the supervised machine learning models based on stati
 I have included option I in comments, it is just one line code and make its handy to solve this problem. If the option II is chosen, we must initialize N (Number of categories) support vector classifiers to detect each class. Also, the label data will be required to pre process before training the model. I convert the labels in one and zero for each of the category individually and use this process data to train all the svms. To understand how one vs rest classifier works refer to below figure:
 
 <div style="float: center; padding: 20px">
-<img src="one_vs_all.png" width = '100%'/>
+<img alt="Report figure" loading="lazy" src="one_vs_all.png" width = '100%'/>
 <p style="font-size: 14px"> Figure 1: One vs All SVM understanding(taken from Internet)</p>
 </div>
 
@@ -388,21 +387,21 @@ Below is the code routine to perform these task.
 I perfrom simple comparison of nearest neighbour and support vector classifier. Firstly, the features we get in first step (tiny_images) are used to as training data for a 1-NN schematic. The results are not very good, the accuracy is just 23.33%. The confusion matrix is attached below:
 
 <div style="float: center; padding: 20px">
-<img src="tiny_nn.png" width = '100%'/>
+<img alt="Report figure" loading="lazy" src="tiny_nn.png" width = '100%'/>
 <p style="font-size: 14px"> Figure 2: Confusion matrix using Tiny images and nearest neighbour</p>
 </div>
 
 The same model is when used with bag of SIFT faetures the accuracy increases by 29% with value of 51.87%. The confusion matrix for nearest neighbour and bag of SIFT features as training data is reported below:
 
 <div style="float: center; padding: 20px">
-<img src="bow_nn.png" width = '100%'/>
+<img alt="Report figure" loading="lazy" src="bow_nn.png" width = '100%'/>
 <p style="font-size: 14px"> Figure 3: Confusion matrix using Bag of SIFT features and nearest neighbour</p>
 </div>
 
 Support vector classifier outperforms nearest neighbour classifier with an achievement of nearly 13% in accuracy. The model mostly confuses the bedroom with the living room. The confusion matrix using SVM is attached below:
 
 <div style="float: center; padding: 20px">
-<img src="bow_svm.png" width = '100%'/>
+<img alt="Report figure" loading="lazy" src="bow_svm.png" width = '100%'/>
 <p style="font-size: 14px"> Figure 4: Confusion matrix using Bag of SIFT features and SVM</p>
 </div>
 </p>
@@ -511,68 +510,68 @@ It is evident from the resutls that using enriched vocabulary leads to more prom
 </tr>
 
 <td>Store</td>
-<td bgcolor=GreenYellow><img src="results/Store_image_0038.jpg" width=100 height=75></td>
-<td bgcolor=GreenYellow><img src="results/Store_image_0127.jpg" width=118 height=75></td>
-<td bgcolor=LightCoral><img src="results/Kitchen_image_0168.jpg" width=112 height=75><br><small>Kitchen</small></td>
-<td bgcolor=LightCoral><img src="results/LivingRoom_image_0045.jpg" width=115 height=75><br><small>LivingRoom</small></td>
-<td bgcolor=SkyBlue><img src="results/Store_image_0057.jpg" width=100 height=75><br><small>Kitchen</small></td>
-<td bgcolor=SkyBlue><img src="results/Store_image_0002.jpg" width=100 height=75><br><small>Mountain</small></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Store_image_0038.jpg" width=100 height=75></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Store_image_0127.jpg" width=118 height=75></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Kitchen_image_0168.jpg" width=112 height=75><br><small>Kitchen</small></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/LivingRoom_image_0045.jpg" width=115 height=75><br><small>LivingRoom</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Store_image_0057.jpg" width=100 height=75><br><small>Kitchen</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Store_image_0002.jpg" width=100 height=75><br><small>Mountain</small></td>
 </tr>
 <tr>
 <td>Coast</td>
-<td bgcolor=GreenYellow><img src="results/Coast_image_0055.jpg" width=75 height=75></td>
-<td bgcolor=GreenYellow><img src="results/Coast_image_0104.jpg" width=75 height=75></td>
-<td bgcolor=LightCoral><img src="results/Mountain_image_0030.jpg" width=75 height=75><br><small>Mountain</small></td>
-<td bgcolor=LightCoral><img src="results/OpenCountry_image_0042.jpg" width=75 height=75><br><small>OpenCountry</small></td>
-<td bgcolor=SkyBlue><img src="results/Coast_image_0097.jpg" width=75 height=75><br><small>Mountain</small></td>
-<td bgcolor=SkyBlue><img src="results/Coast_image_0070.jpg" width=75 height=75><br><small>OpenCountry</small></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Coast_image_0055.jpg" width=75 height=75></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Coast_image_0104.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Mountain_image_0030.jpg" width=75 height=75><br><small>Mountain</small></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/OpenCountry_image_0042.jpg" width=75 height=75><br><small>OpenCountry</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Coast_image_0097.jpg" width=75 height=75><br><small>Mountain</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Coast_image_0070.jpg" width=75 height=75><br><small>OpenCountry</small></td>
 </tr>
 <tr>
 <td>Mountain</td>
-<td bgcolor=GreenYellow><img src="results/Mountain_image_0047.jpg" width=75 height=75></td>
-<td bgcolor=GreenYellow><img src="results/Mountain_image_0119.jpg" width=75 height=75></td>
-<td bgcolor=LightCoral><img src="results/Industrial_image_0049.jpg" width=100 height=75><br><small>Industrial</small></td>
-<td bgcolor=LightCoral><img src="results/Store_image_0002.jpg" width=100 height=75><br><small>Store</small></td>
-<td bgcolor=SkyBlue><img src="results/Mountain_image_0061.jpg" width=75 height=75><br><small>OpenCountry</small></td>
-<td bgcolor=SkyBlue><img src="results/Mountain_image_0039.jpg" width=75 height=75><br><small>Coast</small></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Mountain_image_0047.jpg" width=75 height=75></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Mountain_image_0119.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Industrial_image_0049.jpg" width=100 height=75><br><small>Industrial</small></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Store_image_0002.jpg" width=100 height=75><br><small>Store</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Mountain_image_0061.jpg" width=75 height=75><br><small>OpenCountry</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Mountain_image_0039.jpg" width=75 height=75><br><small>Coast</small></td>
 </tr>
 <tr>
 <td>Forest</td>
-<td bgcolor=GreenYellow><img src="results/Forest_image_0138.jpg" width=75 height=75></td>
-<td bgcolor=GreenYellow><img src="results/Forest_image_0009.jpg" width=75 height=75></td>
-<td bgcolor=LightCoral><img src="results/Mountain_image_0101.jpg" width=75 height=75><br><small>Mountain</small></td>
-<td bgcolor=LightCoral><img src="results/Coast_image_0107.jpg" width=75 height=75><br><small>Coast</small></td>
-<td bgcolor=SkyBlue><img src="results/Forest_image_0093.jpg" width=75 height=75><br><small>OpenCountry</small></td>
-<td bgcolor=SkyBlue><img src="results/Forest_image_0117.jpg" width=75 height=75><br><small>Mountain</small></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Forest_image_0138.jpg" width=75 height=75></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Forest_image_0009.jpg" width=75 height=75></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Mountain_image_0101.jpg" width=75 height=75><br><small>Mountain</small></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Coast_image_0107.jpg" width=75 height=75><br><small>Coast</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Forest_image_0093.jpg" width=75 height=75><br><small>OpenCountry</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Forest_image_0117.jpg" width=75 height=75><br><small>Mountain</small></td>
 </tr>
 <tr>
 <td>Bedroom</td>
-<td bgcolor=GreenYellow><img src="results/Bedroom_image_0064.jpg" width=103 height=75></td>
-<td bgcolor=GreenYellow><img src="results/Bedroom_image_0073.jpg" width=112 height=75></td>
-<td bgcolor=LightCoral><img src="results/Kitchen_image_0118.jpg" width=57 height=75><br><small>Kitchen</small></td>
-<td bgcolor=LightCoral><img src="results/InsideCity_image_0095.jpg" width=75 height=75><br><small>InsideCity</small></td>
-<td bgcolor=SkyBlue><img src="results/Bedroom_image_0030.jpg" width=97 height=75><br><small>LivingRoom</small></td>
-<td bgcolor=SkyBlue><img src="results/Bedroom_image_0050.jpg" width=113 height=75><br><small>Office</small></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Bedroom_image_0064.jpg" width=103 height=75></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Bedroom_image_0073.jpg" width=112 height=75></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Kitchen_image_0118.jpg" width=57 height=75><br><small>Kitchen</small></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/InsideCity_image_0095.jpg" width=75 height=75><br><small>InsideCity</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Bedroom_image_0030.jpg" width=97 height=75><br><small>LivingRoom</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Bedroom_image_0050.jpg" width=113 height=75><br><small>Office</small></td>
 </tr>
 <tr>
 <td>Kitchen</td>
-<td bgcolor=GreenYellow><img src="results/Kitchen_image_0192.jpg" width=100 height=75></td>
-<td bgcolor=GreenYellow><img src="results/Kitchen_image_0137.jpg" width=100 height=75></td>
-<td bgcolor=LightCoral><img src="results/LivingRoom_image_0055.jpg" width=100 height=75><br><small>LivingRoom</small></td>
-<td bgcolor=LightCoral><img src="results/LivingRoom_image_0090.jpg" width=114 height=75><br><small>LivingRoom</small></td>
-<td bgcolor=SkyBlue><img src="results/Kitchen_image_0064.jpg" width=107 height=75><br><small>InsideCity</small></td>
-<td bgcolor=SkyBlue><img src="results/Kitchen_image_0168.jpg" width=112 height=75><br><small>Store</small></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Kitchen_image_0192.jpg" width=100 height=75></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/Kitchen_image_0137.jpg" width=100 height=75></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/LivingRoom_image_0055.jpg" width=100 height=75><br><small>LivingRoom</small></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/LivingRoom_image_0090.jpg" width=114 height=75><br><small>LivingRoom</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Kitchen_image_0064.jpg" width=107 height=75><br><small>InsideCity</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/Kitchen_image_0168.jpg" width=112 height=75><br><small>Store</small></td>
 </tr>
 
 <tr>
 <tr>
 <td>LivingRoom</td>
-<td bgcolor=GreenYellow><img src="results/LivingRoom_image_0073.jpg" width=100 height=75></td>
-<td bgcolor=GreenYellow><img src="results/LivingRoom_image_0123.jpg" width=98 height=75></td>
-<td bgcolor=LightCoral><img src="results/Bedroom_image_0030.jpg" width=97 height=75><br><small>Bedroom</small></td>
-<td bgcolor=LightCoral><img src="results/Bedroom_image_0066.jpg" width=100 height=75><br><small>Bedroom</small></td>
-<td bgcolor=SkyBlue><img src="results/LivingRoom_image_0058.jpg" width=101 height=75><br><small>Bedroom</small></td>
-<td bgcolor=SkyBlue><img src="results/LivingRoom_image_0145.jpg" width=100 height=75><br><small>Office</small></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/LivingRoom_image_0073.jpg" width=100 height=75></td>
+<td bgcolor=GreenYellow><img alt="Report figure" loading="lazy" src="results/LivingRoom_image_0123.jpg" width=98 height=75></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Bedroom_image_0030.jpg" width=97 height=75><br><small>Bedroom</small></td>
+<td bgcolor=LightCoral><img alt="Report figure" loading="lazy" src="results/Bedroom_image_0066.jpg" width=100 height=75><br><small>Bedroom</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/LivingRoom_image_0058.jpg" width=101 height=75><br><small>Bedroom</small></td>
+<td bgcolor=SkyBlue><img alt="Report figure" loading="lazy" src="results/LivingRoom_image_0145.jpg" width=100 height=75><br><small>Office</small></td>
 </tr>
 
 <tr>

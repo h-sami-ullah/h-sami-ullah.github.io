@@ -1,0 +1,40 @@
+- title: "Machine learning"
+  items:
+    - "Scikit-learn"
+    - "XGBoost"
+    - "Regression"
+    - "Time series"
+    - "Model evaluation"
+
+- title: "Deep learning"
+  items:
+    - "TensorFlow / Keras"
+    - "PyTorch"
+    - "LSTM"
+    - "U-Net"
+    - "ResNet"
+
+- title: "Computer vision"
+  items:
+    - "Semantic segmentation"
+    - "Object detection"
+    - "Feature matching"
+    - "Camera calibration"
+    - "Optical flow"
+
+- title: "Deployment and tooling"
+  items:
+    - "Docker"
+    - "AWS S3 / ECS"
+    - "DVC"
+    - "Neptune"
+    - "ONNX Runtime"
+    - "CI/CD"
+
+- title: "Signal and optimization"
+  items:
+    - "MFCC"
+    - "Adaptive filters"
+    - "SVM"
+    - "PSO"
+    - "MATLAB"

@@ -1,33 +1,31 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Computer Vision Project</title>
-<link href='http://fonts.googleapis.com/css?family=Nunito:300|Crimson+Text|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" title="Default" href="styles/github.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
-
+<title>Camera Calibration and Fundamental Matrix</title>
+<link rel="stylesheet" href="../../assets/css/report.css">
 <link rel="stylesheet" href="highlighting/styles/default.css">
 <script src="highlighting/highlight.pack.js"></script>
 
 <style type="text/css">
 body {
 	margin: 0px;
-	width: 110%;
-	font-family: 'Crimson Text', serif;
+	width: 100%;
+	font-family: Georgia, serif;
 	font-size: 20px;
-	background: #fcfcfc;
+	background: #f4f1ea;
 }
 h1 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 28px;
 	margin: 25px 0px 0px 0px;
-	text-transform: loIrcase;
+	text-transform: lowercase;
 
 }
 
 h2 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 32px;
 	margin: 15px 0px 35px 0px;
 	color: #333;	
@@ -35,16 +33,16 @@ h2 {
 }
 
 h3 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 26px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
 	word-spacing: 2px;
 }
 h4 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 22px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
@@ -52,8 +50,8 @@ h4 {
 }
 
 h5 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 18px;
 	margin: 10px 0px 10px 0px;
 	color: #111;
@@ -65,22 +63,22 @@ p, li {
 }
 
 a {
-	color: #DE3737;
+	color: #a34328;
 }
 
 .container {
 	margin: 0px auto 0px auto;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 }
 
 #header {
 	background: #333;
-	width: 110%;
+	width: 100%;
 }
 
 #headersub {
 	color: #ccc;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 	margin: 0px auto 0px auto;
 	padding: 20px 0px 20px 0px;
 }
@@ -95,7 +93,7 @@ a {
 }
 .sep {
 	height: 1px;
-	width: 110%;
+	width: 100%;
 	background: #999;
 	margin: 20px 0px 20px 0px;
 }
@@ -103,7 +101,7 @@ a {
 	font-size: 16px;
 }
 .latex {
-	width: 110%;
+	width: 100%;
 }
 
 .latex img {
@@ -112,7 +110,7 @@ a {
 }
 
 pre {
-	font-family: 'Droid Sans Mono';
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 	font-size: 14px;
 }
 
@@ -128,12 +126,13 @@ td img {
 </script>
 </head>
 <body>
+<a class="report-home" href="../index.html">&larr; All reports</a>
 <div class="container">
 
 <h2>Project 3: Camera Calibration and Fundamental Matrix Estimation with RANSAC</h2>
 
 
-<img src="ransac33.png" />
+<img alt="Report figure" loading="lazy" src="ransac33.png" />
 <p style="font-size: 14px"> Figure 1: Epipolar lines using Normalized points and RANSAC</p>
 
 
@@ -161,28 +160,28 @@ The first step of this project is to find the 3-D world to 2-D transformation. W
 
 
 <div style="float: middle; padding: 30px">
-<img src="P1_F1.gif"/>
+<img alt="Report figure" loading="lazy" src="P1_F1.gif"/>
 </div>
 
 In above equation u and v represents the 2-D image points, whereas the X, Y, and Z are the real-world points to be projected into 2-D (u,v). We need to fix the scale for the matrix and get the final expression in form of <b>AX = B</b>. We can find <b>u</b>  and <b>v</b>  from above matrix by dividing first two rows by third row. The next expression will be:
 <div style="float: middle; padding: 30px">
-<img src="P1_F2.gif"/>
+<img alt="Report figure" loading="lazy" src="P1_F2.gif"/>
 </div>
 <div style="float: middle; padding: 30px">
-<img src="P1_F3.gif"/>
+<img alt="Report figure" loading="lazy" src="P1_F3.gif"/>
 </div>
 
 Which can be further simplified as:
 
 <div style="float: middle; padding: 30px">
-<img src="P1_F4.gif"/>
+<img alt="Report figure" loading="lazy" src="P1_F4.gif"/>
 </div>
 <div style="float: middle; padding: 30px">
-<img src="P1_F5.gif"/>
+<img alt="Report figure" loading="lazy" src="P1_F5.gif"/>
 </div>
 As we want to <b>fix the scale</b> for the matrix, we assign <b>m_34</b> as <b>1</b>. One solution can be m matrix to be 0, but that is not the useful solution. The other way to do this is to decompose the matrix into its singular components. The matrix form of <b>AX=B</b> will take the form of below matrix. In the below matrix m_34 is 1.
 <div style="float: middle; padding: 30px">
-<img src="P1_F7.png"/>
+<img alt="Report figure" loading="lazy" src="P1_F7.png"/>
 </div>
 This matrix can be solved by solving <b>X= A-1B</b>. The 11x1 matrix of m can be reshaped to get the final output of shape 3x4. The centre of camera can be found using <b>C =inverse(Q)m_4</b> which can be understand as <b>M=(Q|m_4)</b>. This means m_4 and Q are part of M matrix we already calculated. The last column of M represents m_4 and first three columns represent Q resulting m_4’s shape  to be 3x1 and for Q to be of 3x3 dimension.
 The below code routine help us calculating the <b>M</b> matrix:
@@ -246,7 +245,7 @@ In the above routine the implementation is for the projection matrix estimation.
 The figure below shows actual and projected point. The residual for the given base example is 0.044549.</p>
 
 <div style="float: center; padding: 20px">
-<img src="fig1.png" width = '100%'/>
+<img alt="Report figure" loading="lazy" src="fig1.png" width = '100%'/>
 <p style="font-size: 14px"> Figure 2: Actual vs projected points</p>
 </div>
 
@@ -254,7 +253,7 @@ The figure below shows actual and projected point. The residual for the given ba
 We now can show the camera centre using the routine discuss above. If we plot the centre location in 3-D we can get a visual point as given in the below figure.
 </p>
 <div style="float: center; padding: 20px">
-<img src="fig2.png" width = '100%'/>
+<img alt="Report figure" loading="lazy" src="fig2.png" width = '100%'/>
 <p style="font-size: 14px"> Figure 3: Camera Center in 3-D</p>
 </div>
 
@@ -267,21 +266,21 @@ In this section we are required to estimate the transformation of points in one 
 
 
 <div style="float: middle; padding: 30px">
-<img src="P2_F1.gif"/>
+<img alt="Report figure" loading="lazy" src="P2_F1.gif"/>
 </div>
 
 
 <p>We can simplify it further as follows:</p>
 <div style="float: middle; padding: 30px">
-<img src="P2_F2.gif"/>
+<img alt="Report figure" loading="lazy" src="P2_F2.gif"/>
 </div>
 <p>Whcih in turn results in the below equation:</p>
 <div style="float: middle; padding: 30px">
-<img src="P2_F3.gif" width="50%"/>
+<img alt="Report figure" loading="lazy" src="P2_F3.gif" width="50%"/>
 </div>
 <p>Previously we propose that m_34 is one to fix the scale of matrix. Here we do the same and choose f_33 to be one. If we simplify the expression we can write the new expression as:</p>
 <div style="float: middle; padding: 30px">
-<img src="P2_F4.png" width="40%"/>
+<img alt="Report figure" loading="lazy" src="P2_F4.png" width="40%"/>
 </div>
 <p>&emsp;&emsp;One can find the f matrix by solving the above expression. As there are 8 values in f matrix and we already supposed f_33 to be one, we can convert this column matrix into a 3x3 matrix f. Again f matrix is of rank 2 so it can be written in term of its singular decomposed elements. 
 </p>
@@ -325,10 +324,10 @@ The output of unnormalized fundamental is not very promising and can be visulaiz
 <tr>
 <td>
 <div style="float: left; padding: 20px">
-<img src="fig3.png"  height="315" widht="800"/>
+<img alt="Report figure" loading="lazy" src="fig3.png"  height="315" width="800"/>
 </div>
 <div style="float: right; padding: 20px">
-<img src="fig4.png"  height="315" widht="800" />
+<img alt="Report figure" loading="lazy" src="fig4.png"  height="315" width="800" />
 </div>
 </td>
 </tr>
@@ -410,10 +409,10 @@ The below routine we perfom the second step of fundamental matrix estimation i.e
 <tr>
 <td>
 <div style="float: left; padding: 20px">
-<img src="fig4n.png"  height="315" widht="800"/>
+<img alt="Report figure" loading="lazy" src="fig4n.png"  height="315" width="800"/>
 </div>
 <div style="float: right; padding: 20px">
-<img src="fig5n.png"  height="315" widht="800" />
+<img alt="Report figure" loading="lazy" src="fig5n.png"  height="315" width="800" />
 </div>
 </td>
 </tr>
@@ -490,20 +489,20 @@ The last part of this project is to use RANSAC and target the computational cost
 <p>&emsp;&emsp;The results achived on different examples images are shown below:
 </p>
 <div style="float: left; padding: 20px">
-<img src="ransac1.png" />
-<img src="ransac21.png" />
-<img src="ransac31.png" />
-<img src="ransac41.png" />
+<img alt="Report figure" loading="lazy" src="ransac1.png" />
+<img alt="Report figure" loading="lazy" src="ransac21.png" />
+<img alt="Report figure" loading="lazy" src="ransac31.png" />
+<img alt="Report figure" loading="lazy" src="ransac41.png" />
 <p style="font-size: 14px"> Figure 6: RANSAC Result after Normalized Fundemental Matrix</p>
 </div>
 <table border=1>
 <tr>
 <td>
 <div style="float: left; padding: 20px">
-<img src="ransac2.png"  height="315" widht="800"/>
+<img alt="Report figure" loading="lazy" src="ransac2.png"  height="315" width="800"/>
 </div>
 <div style="float: right; padding: 20px">
-<img src="ransac3.png"  height="315" widht="800" />
+<img alt="Report figure" loading="lazy" src="ransac3.png"  height="315" width="800" />
 </div>
 </td>
 </tr>
@@ -516,10 +515,10 @@ The last part of this project is to use RANSAC and target the computational cost
 <tr>
 <td>
 <div style="float: left; padding: 20px">
-<img src="ransac22.png"  height="315" widht="800"/>
+<img alt="Report figure" loading="lazy" src="ransac22.png"  height="315" width="800"/>
 </div>
 <div style="float: right; padding: 20px">
-<img src="ransac23.png"  height="315" widht="800" />
+<img alt="Report figure" loading="lazy" src="ransac23.png"  height="315" width="800" />
 </div>
 </td>
 </tr>
@@ -532,10 +531,10 @@ The last part of this project is to use RANSAC and target the computational cost
 <tr>
 <td>
 <div style="float: left; padding: 20px">
-<img src="ransac32.png"  height="315" widht="800"/>
+<img alt="Report figure" loading="lazy" src="ransac32.png"  height="315" width="800"/>
 </div>
 <div style="float: right; padding: 20px">
-<img src="ransac33.png"  height="315" widht="800" />
+<img alt="Report figure" loading="lazy" src="ransac33.png"  height="315" width="800" />
 </div>
 </td>
 </tr>
@@ -548,10 +547,10 @@ The last part of this project is to use RANSAC and target the computational cost
 <tr>
 <td>
 <div style="float: left; padding: 20px">
-<img src="ransac42.png"  height="315" widht="800"/>
+<img alt="Report figure" loading="lazy" src="ransac42.png"  height="315" width="800"/>
 </div>
 <div style="float: right; padding: 20px">
-<img src="ransac43.png"  height="315" widht="800" />
+<img alt="Report figure" loading="lazy" src="ransac43.png"  height="315" width="800" />
 </div>
 </td>
 </tr>

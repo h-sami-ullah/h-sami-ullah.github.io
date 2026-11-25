@@ -1,33 +1,31 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Computer Vision Project</title>
-<link href='http://fonts.googleapis.com/css?family=Nunito:300|Crimson+Text|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" title="Default" href="styles/github.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>  
-
+<title>Image Filtering and Hybrid Images</title>
+<link rel="stylesheet" href="../../assets/css/report.css">
 <link rel="stylesheet" href="highlighting/styles/default.css">
 <script src="highlighting/highlight.pack.js"></script>
 
 <style type="text/css">
 body {
 	margin: 0px;
-	width: 110%;
-	font-family: 'Crimson Text', serif;
+	width: 100%;
+	font-family: Georgia, serif;
 	font-size: 20px;
-	background: #fcfcfc;
+	background: #f4f1ea;
 }
 h1 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 28px;
 	margin: 25px 0px 0px 0px;
-	text-transform: loIrcase;
+	text-transform: lowercase;
 
 }
 
 h2 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 32px;
 	margin: 15px 0px 35px 0px;
 	color: #333;	
@@ -35,16 +33,16 @@ h2 {
 }
 
 h3 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 26px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
 	word-spacing: 2px;
 }
 h4 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 22px;
 	margin: 10px 0px 10px 0px;
 	color: #333;
@@ -52,8 +50,8 @@ h4 {
 }
 
 h5 {
-	font-family: 'Nunito', sans-serif;
-	font-Iight: normal;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-weight: normal;
 	font-size: 18px;
 	margin: 10px 0px 10px 0px;
 	color: #111;
@@ -65,22 +63,22 @@ p, li {
 }
 
 a {
-	color: #DE3737;
+	color: #a34328;
 }
 
 .container {
 	margin: 0px auto 0px auto;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 }
 
 #header {
 	background: #333;
-	width: 110%;
+	width: 100%;
 }
 
 #headersub {
 	color: #ccc;
-	width: 960px;
+	width: min(100% - 48px, 960px);
 	margin: 0px auto 0px auto;
 	padding: 20px 0px 20px 0px;
 }
@@ -95,7 +93,7 @@ a {
 }
 .sep {
 	height: 1px;
-	width: 110%;
+	width: 100%;
 	background: #999;
 	margin: 20px 0px 20px 0px;
 }
@@ -103,7 +101,7 @@ a {
 	font-size: 16px;
 }
 .latex {
-	width: 110%;
+	width: 100%;
 }
 
 .latex img {
@@ -112,7 +110,7 @@ a {
 }
 
 pre {
-	font-family: 'Droid Sans Mono';
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 	font-size: 14px;
 }
 
@@ -128,12 +126,13 @@ td img {
 </script>
 </head>
 <body>
+<a class="report-home" href="../index.html">&larr; All reports</a>
 <div class="container">
 
 <h2>Project 1: Image Filtering and Hybrid Images</h2>
 
 <div style="float: right; padding: 20px">
-<img src="./Part2_Hybrid/Filters/catdog_hybrid_image6.jpg" width="310" />
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/catdog_hybrid_image6.jpg" width="310" />
 <p style="text-align: center">Hybrid Image of Dog and Cat</p>
 </div>
 
@@ -287,7 +286,7 @@ filter = np.flipud(np.fliplr(filter))
 <table border=1>
 <tr>
 <td>
-<img src="./Part1_filtering/All_Filters.png" height="120" widht="240"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/All_Filters.png" height="120" width="240"/>
 </td>
 </tr>
 <table border=1>
@@ -303,90 +302,90 @@ filter = np.flipud(np.fliplr(filter))
  <table border=1>
 <tr>
 <td>
-<img src="./Part1_filtering/CAT/identity_image_cat.jpg" width="155"/>
-<img src="./Part1_filtering/CAT/blur_image_cat.jpg"  width="155"/>
-<img src="./Part1_filtering/CAT/large_blur_image_cat.jpg" width="155"/>
-<img src="./Part1_filtering/CAT/sobel_image_cat.jpg" width="155"/>
-<img src="./Part1_filtering/CAT/laplacian_image_cat.jpg" width="155"/>
-<img src="./Part1_filtering/CAT/high_pass_image_cat.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/CAT/identity_image_cat.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/CAT/blur_image_cat.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/CAT/large_blur_image_cat.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/CAT/sobel_image_cat.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/CAT/laplacian_image_cat.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/CAT/high_pass_image_cat.jpg" width="155"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part1_filtering/DOG/identity_image_dog.jpg" width="155"/>
-<img src="./Part1_filtering/DOG/blur_image_dog.jpg"  width="155"/>
-<img src="./Part1_filtering/DOG/large_blur_image_dog.jpg" width="155"/>
-<img src="./Part1_filtering/DOG/sobel_image_dog.jpg" width="155"/>
-<img src="./Part1_filtering/DOG/laplacian_image_dog.jpg" width="155"/>
-<img src="./Part1_filtering/DOG/high_pass_image_dog.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/DOG/identity_image_dog.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/DOG/blur_image_dog.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/DOG/large_blur_image_dog.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/DOG/sobel_image_dog.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/DOG/laplacian_image_dog.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/DOG/high_pass_image_dog.jpg" width="155"/>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="./Part1_filtering/Bird/identity_image_bird.jpg" width="155"/>
-<img src="./Part1_filtering/Bird/blur_image_bird.jpg"  width="155"/>
-<img src="./Part1_filtering/Bird/large_blur_image_bird.jpg" width="155"/>
-<img src="./Part1_filtering/Bird/sobel_image_bird.jpg" width="155"/>
-<img src="./Part1_filtering/Bird/laplacian_image_bird.jpg" width="155"/>
-<img src="./Part1_filtering/Bird/high_pass_image_bird.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bird/identity_image_bird.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bird/blur_image_bird.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bird/large_blur_image_bird.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bird/sobel_image_bird.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bird/laplacian_image_bird.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bird/high_pass_image_bird.jpg" width="155"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part1_filtering/Fish/identity_image_fish.jpg" width="155"/>
-<img src="./Part1_filtering/Fish/blur_image_fish.jpg"  width="155"/>
-<img src="./Part1_filtering/Fish/large_blur_image_fish.jpg" width="155"/>
-<img src="./Part1_filtering/Fish/sobel_image_fish.jpg" width="155"/>
-<img src="./Part1_filtering/Fish/laplacian_image_fish.jpg" width="155"/>
-<img src="./Part1_filtering/Fish/high_pass_image_fish.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Fish/identity_image_fish.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Fish/blur_image_fish.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Fish/large_blur_image_fish.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Fish/sobel_image_fish.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Fish/laplacian_image_fish.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Fish/high_pass_image_fish.jpg" width="155"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part1_filtering/Einstein/identity_image_einstein.jpg" width="155"/>
-<img src="./Part1_filtering/Einstein/blur_image_einstein.jpg"  width="155"/>
-<img src="./Part1_filtering/Einstein/large_blur_image_einstein.jpg" width="155"/>
-<img src="./Part1_filtering/Einstein/sobel_image_einstein.jpg" width="155"/>
-<img src="./Part1_filtering/Einstein/laplacian_image_einstein.jpg" width="155"/>
-<img src="./Part1_filtering/Einstein/high_pass_image_einstein.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Einstein/identity_image_einstein.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Einstein/blur_image_einstein.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Einstein/large_blur_image_einstein.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Einstein/sobel_image_einstein.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Einstein/laplacian_image_einstein.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Einstein/high_pass_image_einstein.jpg" width="155"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part1_filtering/Marilyn/identity_image_marilyn.jpg" width="155"/>
-<img src="./Part1_filtering/Marilyn/blur_image_marilyn.jpg"  width="155"/>
-<img src="./Part1_filtering/Marilyn/large_blur_image_marilyn.jpg" width="155"/>
-<img src="./Part1_filtering/Marilyn/sobel_image_marilyn.jpg" width="155"/>
-<img src="./Part1_filtering/Marilyn/laplacian_image_marilyn.jpg" width="155"/>
-<img src="./Part1_filtering/Marilyn/high_pass_image_marilyn.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Marilyn/identity_image_marilyn.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Marilyn/blur_image_marilyn.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Marilyn/large_blur_image_marilyn.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Marilyn/sobel_image_marilyn.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Marilyn/laplacian_image_marilyn.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Marilyn/high_pass_image_marilyn.jpg" width="155"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part1_filtering/Motorcycle/identity_image.jpg" width="155"/>
-<img src="./Part1_filtering/Motorcycle/blur_image.jpg"  width="155"/>
-<img src="./Part1_filtering/Motorcycle/large_blur_image.jpg" width="155"/>
-<img src="./Part1_filtering/Motorcycle/sobel_image.jpg" width="155"/>
-<img src="./Part1_filtering/Motorcycle/laplacian_image.jpg" width="155"/>
-<img src="./Part1_filtering/Motorcycle/high_pass_image.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Motorcycle/identity_image.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Motorcycle/blur_image.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Motorcycle/large_blur_image.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Motorcycle/sobel_image.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Motorcycle/laplacian_image.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Motorcycle/high_pass_image.jpg" width="155"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part1_filtering/Bicycle/identity_image_bicycle.jpg" width="155"/>
-<img src="./Part1_filtering/Bicycle/blur_image_bicycle.jpg"  width="155"/>
-<img src="./Part1_filtering/Bicycle/large_blur_image_bicycle.jpg" width="155"/>
-<img src="./Part1_filtering/Bicycle/sobel_image_bicycle.jpg" width="155"/>
-<img src="./Part1_filtering/Bicycle/laplacian_image_bicycle.jpg" width="155"/>
-<img src="./Part1_filtering/Bicycle/high_pass_image_bicycle.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bicycle/identity_image_bicycle.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bicycle/blur_image_bicycle.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bicycle/large_blur_image_bicycle.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bicycle/sobel_image_bicycle.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bicycle/laplacian_image_bicycle.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Bicycle/high_pass_image_bicycle.jpg" width="155"/>
 </td>
 </tr>
 
@@ -394,23 +393,23 @@ filter = np.flipud(np.fliplr(filter))
 
 <tr>
 <td>
-<img src="./Part1_filtering/Submarine/identity_image_submarine.jpg" width="155"/>
-<img src="./Part1_filtering/Submarine/blur_image_submarine.jpg"  width="155"/>
-<img src="./Part1_filtering/Submarine/large_blur_image_submarine.jpg" width="155"/>
-<img src="./Part1_filtering/Submarine/sobel_image_submarine.jpg" width="155"/>
-<img src="./Part1_filtering/Submarine/laplacian_image_submarine.jpg" width="155"/>
-<img src="./Part1_filtering/Submarine/high_pass_image_submarine.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Submarine/identity_image_submarine.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Submarine/blur_image_submarine.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Submarine/large_blur_image_submarine.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Submarine/sobel_image_submarine.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Submarine/laplacian_image_submarine.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Submarine/high_pass_image_submarine.jpg" width="155"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part1_filtering/Plane/identity_image_plane.jpg" width="155"/>
-<img src="./Part1_filtering/Plane/blur_image_plane.jpg"  width="155"/>
-<img src="./Part1_filtering/Plane/large_blur_image_plane.jpg" width="155"/>
-<img src="./Part1_filtering/Plane/sobel_image_plane.jpg" width="155"/>
-<img src="./Part1_filtering/Plane/laplacian_image_plane.jpg" width="155"/>
-<img src="./Part1_filtering/Plane/high_pass_image_plane.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Plane/identity_image_plane.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Plane/blur_image_plane.jpg"  width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Plane/large_blur_image_plane.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Plane/sobel_image_plane.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Plane/laplacian_image_plane.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part1_filtering/Plane/high_pass_image_plane.jpg" width="155"/>
 </td>
 </tr>
 
@@ -487,48 +486,48 @@ def getGaussianKernel(filter_shape=(3,3),sigma=2):
 
 <tr>
 <td>
-<img src="./Part2_Hybrid/Filters/lowpass2.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/lowpass4.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/lowpass5.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/lowpass6.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/lowpass8.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/lowpass9.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/lowpass2.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/lowpass4.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/lowpass5.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/lowpass6.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/lowpass8.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/lowpass9.jpg" width="155"/>
 
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part2_Hybrid/Filters/low_pass_image_dog2.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/low_pass_image_dog4.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/low_pass_image_dog5.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/low_pass_image_dog6.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/low_pass_image_dog8.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/low_pass_image_dog9.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/low_pass_image_dog2.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/low_pass_image_dog4.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/low_pass_image_dog5.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/low_pass_image_dog6.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/low_pass_image_dog8.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/low_pass_image_dog9.jpg" width="155"/>
 
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part2_Hybrid/Filters/high_pass_image_cat2.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/high_pass_image_cat4.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/high_pass_image_cat5.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/high_pass_image_cat6.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/high_pass_image_cat8.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/high_pass_image_cat9.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/high_pass_image_cat2.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/high_pass_image_cat4.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/high_pass_image_cat5.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/high_pass_image_cat6.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/high_pass_image_cat8.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/high_pass_image_cat9.jpg" width="155"/>
 
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part2_Hybrid/Filters/catdog_hybrid_image2.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/catdog_hybrid_image4.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/catdog_hybrid_image5.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/catdog_hybrid_image6.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/catdog_hybrid_image8.jpg" width="155"/>
-<img src="./Part2_Hybrid/Filters/catdog_hybrid_image9.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/catdog_hybrid_image2.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/catdog_hybrid_image4.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/catdog_hybrid_image5.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/catdog_hybrid_image6.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/catdog_hybrid_image8.jpg" width="155"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Filters/catdog_hybrid_image9.jpg" width="155"/>
 
 </td>
 </tr>
@@ -554,21 +553,21 @@ def getGaussianKernel(filter_shape=(3,3),sigma=2):
 
 <tr>
 <td>
-<img src="./data/plane.bmp" width="155" height="175"/>
-<img src="./data/fish.bmp" width="155" height="175"/>
-<img src="./data/einstein.bmp" width="155" height="175"/>
-<img src="./data/cat.bmp" width="155" height="175"/>
-<img src="./data/motorcycle.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/plane.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/fish.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/einstein.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/cat.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/motorcycle.bmp" width="155" height="175"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part2_Hybrid/Plane_Bird/plane_bird_low_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Fish_Submarine/fish_submarine_low_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Einstein_Marilyn/einstein_marilyn_low_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Cat_Dog/cat_dog_low_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Bicycle_Motorcycle/motorcycle_bicycle_low_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Plane_Bird/plane_bird_low_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Fish_Submarine/fish_submarine_low_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Einstein_Marilyn/einstein_marilyn_low_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Cat_Dog/cat_dog_low_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Bicycle_Motorcycle/motorcycle_bicycle_low_frequencies.jpg" width="155" height="175"/>
 </td>
 </tr>
 
@@ -598,21 +597,21 @@ def getGaussianKernel(filter_shape=(3,3),sigma=2):
 
 <tr>
 <td>
-<img src="./data/bird.bmp" width="155" height="175"/>
-<img src="./data/submarine.bmp" width="155" height="175"/>
-<img src="./data/marilyn.bmp" width="155" height="175"/>
-<img src="./data/dog.bmp" width="155" height="175"/>
-<img src="./data/bicycle.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/bird.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/submarine.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/marilyn.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/dog.bmp" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./data/bicycle.bmp" width="155" height="175"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="./Part2_Hybrid/Plane_Bird/plane_bird_high_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Fish_Submarine/fish_submarine_high_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Einstein_Marilyn/einstein_marilyn_high_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Cat_Dog/cat_dog_high_frequencies.jpg" width="155" height="175"/>
-<img src="./Part2_Hybrid/Bicycle_Motorcycle/motorcycle_bicycle_high_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Plane_Bird/plane_bird_high_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Fish_Submarine/fish_submarine_high_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Einstein_Marilyn/einstein_marilyn_high_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Cat_Dog/cat_dog_high_frequencies.jpg" width="155" height="175"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Bicycle_Motorcycle/motorcycle_bicycle_high_frequencies.jpg" width="155" height="175"/>
 </td>
 </tr>
 
@@ -653,36 +652,36 @@ def getGaussianKernel(filter_shape=(3,3),sigma=2):
 
 <tr>
 <td>
-<img src="./data/plane.bmp" width="190"/>
-<img src="./data/bird.bmp" width="190"/>
-<img src="./Part2_Hybrid/Plane_Bird/plane_bird_hybrid_image_scales.jpg" width="380"/>
+<img alt="Report figure" loading="lazy" src="./data/plane.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./data/bird.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Plane_Bird/plane_bird_hybrid_image_scales.jpg" width="380"/>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="./data/fish.bmp" width="190"/>
-<img src="./data/submarine.bmp" width="190"/>
-<img src="./Part2_Hybrid/Fish_Submarine/fish_submarine_hybrid_image_scales.jpg" width="380"/>
+<img alt="Report figure" loading="lazy" src="./data/fish.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./data/submarine.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Fish_Submarine/fish_submarine_hybrid_image_scales.jpg" width="380"/>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="./data/einstein.bmp" width="190"/>
-<img src="./data/marilyn.bmp" width="190"/>
-<img src="./Part2_Hybrid/Einstein_Marilyn/einstein_marilyn_hybrid_image_scales.jpg" width="380"/>
+<img alt="Report figure" loading="lazy" src="./data/einstein.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./data/marilyn.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Einstein_Marilyn/einstein_marilyn_hybrid_image_scales.jpg" width="380"/>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<img src="./data/cat.bmp" width="190"/>
-<img src="./data/dog.bmp" width="190"/>
-<img src="./Part2_Hybrid/Cat_Dog/cat_dog_hybrid_image_scales.jpg" width="380"/>
+<img alt="Report figure" loading="lazy" src="./data/cat.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./data/dog.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Cat_Dog/cat_dog_hybrid_image_scales.jpg" width="380"/>
 </td>
 </tr>
 
@@ -690,9 +689,9 @@ def getGaussianKernel(filter_shape=(3,3),sigma=2):
 
 <tr>
 <td>
-<img src="./data/motorcycle.bmp" width="190"/>
-<img src="./data/bicycle.bmp" width="190"/>
-<img src="./Part2_Hybrid/Bicycle_Motorcycle/motorcycle_bicycle_hybrid_image_scales.jpg" width="380"/>
+<img alt="Report figure" loading="lazy" src="./data/motorcycle.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./data/bicycle.bmp" width="190"/>
+<img alt="Report figure" loading="lazy" src="./Part2_Hybrid/Bicycle_Motorcycle/motorcycle_bicycle_hybrid_image_scales.jpg" width="380"/>
 </td>
 </tr>
 
