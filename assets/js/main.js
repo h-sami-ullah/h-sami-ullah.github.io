@@ -67,7 +67,6 @@
     if (!context) return;
 
     let points = [];
-    let activeSurface = null;
     let width = 0;
     let height = 0;
 
@@ -84,16 +83,8 @@
 
     function clear() {
       points = [];
-      if (activeSurface) activeSurface.classList.remove('is-cursor-active');
-      activeSurface = null;
+      document.body.classList.remove('cursor-light-active');
       context.clearRect(0, 0, width, height);
-    }
-
-    function moveLens(surface, event) {
-      if (!surface) return;
-      const rect = surface.getBoundingClientRect();
-      surface.style.setProperty('--lens-x', (event.clientX - rect.left) + 'px');
-      surface.style.setProperty('--lens-y', (event.clientY - rect.top) + 'px');
     }
 
     function onPointerMove(event) {
@@ -101,13 +92,9 @@
       points.push({ x: event.clientX, y: event.clientY, time: now });
       if (points.length > 14) points.shift();
 
-      const surface = event.target.closest('[data-cursor-surface]');
-      if (surface !== activeSurface) {
-        if (activeSurface) activeSurface.classList.remove('is-cursor-active');
-        activeSurface = surface;
-        if (activeSurface) activeSurface.classList.add('is-cursor-active');
-      }
-      moveLens(activeSurface, event);
+      document.documentElement.style.setProperty('--torch-x', event.clientX + 'px');
+      document.documentElement.style.setProperty('--torch-y', event.clientY + 'px');
+      document.body.classList.add('cursor-light-active');
     }
 
     function draw(now) {

@@ -88,32 +88,36 @@ section[id] {
   transform: translateY(0);
 }
 
-.cursor-surface {
-  position: relative;
-  isolation: isolate;
+#cursor-light {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s ease;
 }
 
-.cursor-surface > * {
-  position: relative;
-  z-index: 1;
+body.cursor-light-active #cursor-light {
+  opacity: 1;
 }
 
-.cursor-surface::before {
+#cursor-light::before,
+#cursor-light::after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 2;
   pointer-events: none;
-  opacity: 0;
-  background:
-    radial-gradient(circle 120px at var(--lens-x, 50%) var(--lens-y, 50%), rgba(255, 255, 235, .3) 0%, rgba(200, 241, 90, .2) 45%, rgba(200, 241, 90, .05) 78%, transparent 100%),
-    radial-gradient(circle 520px at var(--lens-x, 50%) var(--lens-y, 50%), transparent 0%, rgba(4, 6, 5, .12) 42%, rgba(4, 6, 5, .46) 100%);
-  filter: blur(1.2px);
-  transition: opacity .16s ease;
 }
 
-.cursor-surface.is-cursor-active::before {
-  opacity: 1;
+#cursor-light::before {
+  background: radial-gradient(circle 760px at var(--torch-x, 50%) var(--torch-y, 50%), transparent 0%, rgba(3, 5, 4, .14) 42%, rgba(3, 5, 4, .58) 100%);
+  mix-blend-mode: multiply;
+}
+
+#cursor-light::after {
+  background: radial-gradient(circle 240px at var(--torch-x, 50%) var(--torch-y, 50%), rgba(255, 255, 228, .42) 0%, rgba(200, 241, 90, .26) 42%, rgba(200, 241, 90, .06) 76%, transparent 100%);
+  mix-blend-mode: color-dodge;
+  filter: blur(7px);
 }
 
 #cursor-canvas {
@@ -1538,7 +1542,7 @@ section[id] {
     display: none;
   }
 
-  .cursor-surface::before {
+  #cursor-light {
     display: none;
   }
 }
@@ -1564,7 +1568,7 @@ section[id] {
     display: none;
   }
 
-  .cursor-surface::before {
+  #cursor-light {
     display: none;
   }
 }
