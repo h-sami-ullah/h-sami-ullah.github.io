@@ -129,7 +129,7 @@
         context.lineTo(current.x, current.y);
         context.lineWidth = lineWidth;
         context.lineCap = 'round';
-        context.strokeStyle = 'rgba(201, 255, 61, ' + alpha + ')';
+        context.strokeStyle = 'rgba(200, 241, 90, ' + alpha + ')';
         context.stroke();
       }
 
