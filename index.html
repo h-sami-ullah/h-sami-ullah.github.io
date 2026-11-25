@@ -5,110 +5,146 @@ description: "Selected machine learning, computer vision, and deployment work by
 full_width: true
 ---
 
-<section class="hero cursor-surface" id="about" data-cursor-surface>
+<section class="hero" id="about" data-cursor-surface>
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">ML / CV Engineer &middot; Research to Deployment</p>
-      <h1>Hafiz Samiullah</h1>
-      <p class="hero-lede">I turn machine-learning ideas into systems you can actually run.</p>
+      <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span>ML / CV Engineer &middot; Research &rarr; Deployment</p>
+      <h1>Hafiz<br><span>Samiullah.</span></h1>
+      <p class="hero-lede">Machine-learning systems that leave the notebook.</p>
       <p class="hero-text">
-        My work spans geospatial prediction, model optimization, computer vision, and published
-        research. I care about the unglamorous parts too: clean pipelines, honest benchmarks,
-        reproducible experiments, and deployments that hold up outside a notebook.
+        I build geospatial prediction models, optimize vision models for real latency budgets,
+        and publish applied research. The work is equal parts experimentation, engineering,
+        and making the result usable.
       </p>
       <div class="hero-actions">
-        <a class="button button-solid" href="#work">See selected work</a>
-        <a class="button button-outline" href="mailto:{{ site.email }}">Contact me</a>
+        <a class="button button-acid" href="#work">Explore the work</a>
+        <a class="button button-line" href="mailto:{{ site.email }}">Start a conversation</a>
       </div>
-      <dl class="hero-stats">
-        <div><dt>03</dt><dd>case studies</dd></div>
-        <div><dt>03</dt><dd>peer-reviewed papers</dd></div>
-        <div><dt>05</dt><dd>full CV reports</dd></div>
-      </dl>
-    </div>
-    <figure class="hero-figure">
-      <img src="{{ "images/urc.png" | relative_url }}" alt="Portrait of Hafiz Samiullah" loading="eager">
-      <figcaption>
-        <span>Target role</span>
-        ML / Computer Vision Engineer
-      </figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="section section-work cursor-surface" id="work" data-cursor-surface>
-  <div class="container">
-    <div class="section-head">
-      <p class="section-number">01 / Selected work</p>
-      <h2>Three projects with depth, not just screenshots</h2>
-      <p>Each case study shows the problem, the engineering decisions, and the outcome I can stand behind.</p>
+      <ul class="hero-chips" aria-label="Core areas">
+        <li>Geospatial ML</li>
+        <li>ONNX Optimization</li>
+        <li>Computer Vision</li>
+        <li>Applied Research</li>
+      </ul>
     </div>
 
-    {% for case in site.data.case_studies %}
-    <article class="case-study">
-      <div class="case-index">{{ forloop.index | prepend: "0" }}</div>
-
-      <div class="case-body">
-        <p class="case-label">{{ case.label }} &middot; {{ case.year }}</p>
-        <h3>{{ case.title }}</h3>
-        <p class="case-summary">{{ case.summary }}</p>
-        <p class="case-detail">{{ case.detail }}</p>
-
-        <dl class="case-facts">
-          {% for fact in case.facts %}
-          <div><dt>{{ fact.value }}</dt><dd>{{ fact.label }}</dd></div>
-          {% endfor %}
+    <aside class="hero-panel" aria-label="Profile summary">
+      <div class="panel-top">
+        <span>profile.md</span>
+        <span class="panel-status"><i aria-hidden="true"></i> focused</span>
+      </div>
+      <div class="panel-body">
+        <p class="panel-label">Current focus</p>
+        <h2>Deployable vision + applied ML</h2>
+        <div class="panel-bars" aria-hidden="true">
+          <span style="--bar: 92%"></span>
+          <span style="--bar: 78%"></span>
+          <span style="--bar: 64%"></span>
+          <span style="--bar: 51%"></span>
+        </div>
+        <dl class="panel-stats">
+          <div><dt>03</dt><dd>case studies</dd></div>
+          <div><dt>03</dt><dd>papers</dd></div>
+          <div><dt>05</dt><dd>reports</dd></div>
         </dl>
-
-        <ul class="inline-list" aria-label="Technologies used">
-          {% for tech in case.tech %}
-          <li>{{ tech }}</li>
-          {% endfor %}
-        </ul>
-
-        <div class="case-links">
-          {% for link in case.links %}
-          {% assign link_url = link.url %}
-          {% unless link.url contains "://" %}{% assign link_url = link.url | relative_url %}{% endunless %}
-          {% if link.primary %}
-          <a class="text-link text-link-strong" href="{{ link_url }}">{{ link.label }} &rarr;</a>
-          {% else %}
-          <a class="text-link" href="{{ link_url }}">{{ link.label }} &rarr;</a>
-          {% endif %}
-          {% endfor %}
-        </div>
+        <p class="panel-note">Target role: ML / Computer Vision Engineer</p>
       </div>
-
-      <div class="case-media">
-        {% if case.media_type == "benchmark" %}
-        <div class="benchmark-panel">
-          <p class="benchmark-title">Latency comparison / per image</p>
-          <div class="benchmark-rows">
-            {% for row in case.benchmarks %}
-            <div class="benchmark-row">
-              <span>{{ row.label }}</span>
-              <span class="benchmark-track"><span style="width: {{ row.width }}%"></span></span>
-              <strong>{{ row.time }}</strong>
-            </div>
-            {% endfor %}
-          </div>
-          <p class="benchmark-note">QAT INT8 keeps the highest accuracy while static INT8 ONNX gives the lowest latency.</p>
-        </div>
-        {% else %}
-        <img src="{{ case.image | relative_url }}" alt="{{ case.image_alt }}" loading="lazy">
-        {% endif %}
-      </div>
-    </article>
-    {% endfor %}
+    </aside>
   </div>
 </section>
 
-<section class="section section-reports cursor-surface" id="reports" data-cursor-surface>
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Geospatial ML <b>//</b> Model Optimization <b>//</b> Computer Vision <b>//</b> Published Research <b>//</b> Geospatial ML <b>//</b> Model Optimization <b>//</b> Computer Vision <b>//</b> Published Research <b>//</b></span>
+    <span>Geospatial ML <b>//</b> Model Optimization <b>//</b> Computer Vision <b>//</b> Published Research <b>//</b> Geospatial ML <b>//</b> Model Optimization <b>//</b> Computer Vision <b>//</b> Published Research <b>//</b></span>
+  </div>
+</div>
+
+<section class="section section-work" id="work" data-cursor-surface>
   <div class="container">
     <div class="section-head">
-      <p class="section-number">02 / Written reports</p>
-      <h2>Computer vision, explained end to end</h2>
-      <p>Full write-ups with methods, figures, results, and discussion — hosted here rather than buried in a repository.</p>
+      <div>
+        <p class="section-number">01 / Selected work</p>
+        <h2>Built, benchmarked,<br>and shipped.</h2>
+      </div>
+      <p>Three projects with a clear problem, real engineering decisions, and outcomes I can explain in an interview.</p>
+    </div>
+
+    <div class="case-stack">
+      {% for case in site.data.case_studies %}
+      <article class="case-card">
+        <div class="case-head">
+          <span class="case-index">{{ forloop.index | prepend: "0" }}</span>
+          <div>
+            <p class="case-label">{{ case.label }} &middot; {{ case.year }}</p>
+            <h3>{{ case.title }}</h3>
+          </div>
+        </div>
+
+        <div class="case-main">
+          <div class="case-copy">
+            <p class="case-summary">{{ case.summary }}</p>
+            <p class="case-detail">{{ case.detail }}</p>
+
+            <dl class="case-facts">
+              {% for fact in case.facts %}
+              <div><dt>{{ fact.value }}</dt><dd>{{ fact.label }}</dd></div>
+              {% endfor %}
+            </dl>
+
+            <ul class="inline-list" aria-label="Technologies used">
+              {% for tech in case.tech %}
+              <li>{{ tech }}</li>
+              {% endfor %}
+            </ul>
+
+            <div class="case-links">
+              {% for link in case.links %}
+              {% assign link_url = link.url %}
+              {% unless link.url contains "://" %}{% assign link_url = link.url | relative_url %}{% endunless %}
+              {% if link.primary %}
+              <a class="text-link text-link-strong" href="{{ link_url }}">{{ link.label }} &rarr;</a>
+              {% else %}
+              <a class="text-link" href="{{ link_url }}">{{ link.label }} &rarr;</a>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="case-media">
+            {% if case.media_type == "benchmark" %}
+            <div class="benchmark-panel">
+              <p class="benchmark-title">Latency comparison / per image</p>
+              <div class="benchmark-rows">
+                {% for row in case.benchmarks %}
+                <div class="benchmark-row">
+                  <span>{{ row.label }}</span>
+                  <span class="benchmark-track"><span style="width: {{ row.width }}%"></span></span>
+                  <strong>{{ row.time }}</strong>
+                </div>
+                {% endfor %}
+              </div>
+              <p class="benchmark-note">QAT INT8 keeps the highest accuracy while static INT8 ONNX gives the lowest latency.</p>
+            </div>
+            {% else %}
+            <img src="{{ case.image | relative_url }}" alt="{{ case.image_alt }}" loading="lazy">
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-reports" id="reports" data-cursor-surface>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="section-number">02 / Written reports</p>
+        <h2>Computer vision,<br>without the hand-waving.</h2>
+      </div>
+      <p>Full write-ups with methods, figures, results, and discussion — hosted here instead of buried in a repository.</p>
     </div>
 
     <div class="report-list">
@@ -126,28 +162,32 @@ full_width: true
       {% endfor %}
     </div>
 
-    <a class="text-link text-link-strong report-index-link" href="{{ "computer-vision/index.html" | relative_url }}">Browse the report index &rarr;</a>
+    <a class="text-link text-link-strong section-link" href="{{ "computer-vision/index.html" | relative_url }}">Browse the report index &rarr;</a>
   </div>
 </section>
 
-<section class="section section-archive cursor-surface" id="projects" data-cursor-surface>
+<section class="section section-archive" id="projects" data-cursor-surface>
   <div class="container">
     <div class="section-head">
-      <p class="section-number">03 / Project archive</p>
-      <h2>More work, organized by problem area</h2>
-      <p>A compact archive of forecasting, vision, signal processing, and power systems projects.</p>
+      <div>
+        <p class="section-number">03 / Project archive</p>
+        <h2>More builds.<br>Fewer buzzwords.</h2>
+      </div>
+      <p>A compact archive of forecasting, vision, signal processing, and power systems work.</p>
     </div>
 
-    <div class="archive-filters" id="filters" role="group" aria-label="Filter projects by category">
-      {% for category in site.data.categories %}
-      {% if forloop.first %}
-      <button class="filter-button active" type="button" data-filter="{{ category.id }}" aria-pressed="true">{{ category.label }}</button>
-      {% else %}
-      <button class="filter-button" type="button" data-filter="{{ category.id }}" aria-pressed="false">{{ category.label }}</button>
-      {% endif %}
-      {% endfor %}
+    <div class="archive-toolbar">
+      <div class="archive-filters" id="filters" role="group" aria-label="Filter projects by category">
+        {% for category in site.data.categories %}
+        {% if forloop.first %}
+        <button class="filter-button active" type="button" data-filter="{{ category.id }}" aria-pressed="true">{{ category.label }}</button>
+        {% else %}
+        <button class="filter-button" type="button" data-filter="{{ category.id }}" aria-pressed="false">{{ category.label }}</button>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
     </div>
-    <p class="filter-status" id="filter-status" role="status" aria-live="polite"></p>
 
     <div class="archive-grid">
       {% for project in site.data.projects %}
@@ -162,6 +202,7 @@ full_width: true
           {% endif %}
         </div>
         <div class="archive-body">
+          <p class="archive-category">{{ project.category }}</p>
           <h3><a href="{{ project_url }}">{{ project.title }}</a></h3>
           <p>{{ project.summary }}</p>
           <ul class="inline-list" aria-label="Technologies used">
@@ -177,11 +218,13 @@ full_width: true
   </div>
 </section>
 
-<section class="section section-publications cursor-surface" id="publications" data-cursor-surface>
+<section class="section section-publications" id="publications" data-cursor-surface>
   <div class="container">
     <div class="section-head">
-      <p class="section-number">04 / Publications</p>
-      <h2>Peer-reviewed research</h2>
+      <div>
+        <p class="section-number">04 / Publications</p>
+        <h2>Peer-reviewed<br>and citable.</h2>
+      </div>
       <p>Published work in agricultural AI, computer vision, and multimodal anomaly detection.</p>
     </div>
 
@@ -193,25 +236,27 @@ full_width: true
           <h3>{{ publication.title }}</h3>
           <p class="publication-venue">{{ publication.venue }}</p>
         </div>
-        <a class="text-link" href="{{ publication.url }}">{{ publication.link_label }} &rarr;</a>
+        <a class="text-link text-link-strong" href="{{ publication.url }}">{{ publication.link_label }} &rarr;</a>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section section-skills cursor-surface" id="skills" data-cursor-surface>
+<section class="section section-skills" id="skills" data-cursor-surface>
   <div class="container">
     <div class="section-head">
-      <p class="section-number">05 / Toolkit</p>
-      <h2>What I work with</h2>
-      <p>Grouped by how I actually use them, not as a keyword wall.</p>
+      <div>
+        <p class="section-number">05 / Toolkit</p>
+        <h2>What I actually<br>work with.</h2>
+      </div>
+      <p>Grouped by use case, not dumped as a keyword wall.</p>
     </div>
 
     <div class="skills-grid">
       {% for group in site.data.skills %}
       <div class="skill-group">
-        <h3>{{ group.title }}</h3>
+        <h3><span>{{ forloop.index | prepend: "0" }}</span>{{ group.title }}</h3>
         <ul>
           {% for item in group.items %}
           <li>{{ item }}</li>
@@ -223,17 +268,17 @@ full_width: true
   </div>
 </section>
 
-<section class="contact-band cursor-surface" id="contact" data-cursor-surface>
+<section class="contact-band" id="contact" data-cursor-surface>
   <div class="container contact-grid">
     <div>
       <p class="section-number">06 / Contact</p>
-      <h2>Building something that needs careful ML engineering?</h2>
+      <h2>Give me a hard problem.</h2>
       <p>I am interested in ML engineering, computer vision, and applied research work where experimentation and deployment both matter.</p>
     </div>
     <div class="contact-links">
-      <a class="button button-solid" href="mailto:{{ site.email }}">Email me</a>
-      <a class="button button-outline" href="https://www.linkedin.com/in/hsamiullah/">LinkedIn</a>
-      <a class="button button-outline" href="https://github.com/h-sami-ullah">GitHub</a>
+      <a class="button button-acid" href="mailto:{{ site.email }}">Email me</a>
+      <a class="button button-line" href="https://www.linkedin.com/in/hsamiullah/">LinkedIn</a>
+      <a class="button button-line" href="https://github.com/h-sami-ullah">GitHub</a>
     </div>
   </div>
 </section>

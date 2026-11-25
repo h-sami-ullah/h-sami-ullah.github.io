@@ -121,15 +121,15 @@
         const current = points[index];
         const age = (now - current.time) / 520;
         const strength = Math.max(0, 1 - age) * (index / points.length);
-        const alpha = strength * 0.33;
-        const lineWidth = 1 + strength * 3.2;
+        const alpha = strength * 0.38;
+        const lineWidth = 1 + strength * 3.6;
 
         context.beginPath();
         context.moveTo(previous.x, previous.y);
         context.lineTo(current.x, current.y);
         context.lineWidth = lineWidth;
         context.lineCap = 'round';
-        context.strokeStyle = 'rgba(163, 67, 40, ' + alpha + ')';
+        context.strokeStyle = 'rgba(201, 255, 61, ' + alpha + ')';
         context.stroke();
       }
 

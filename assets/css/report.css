@@ -1,12 +1,13 @@
 :root {
-  --paper: #f4f1ea;
-  --surface: #fbfaf6;
-  --ink: #171914;
-  --muted: #66685f;
-  --line: #cdc7b8;
-  --accent: #a34328;
-  --dark: #111410;
-  --light: #f6f1e6;
+  --paper: #f5f6f0;
+  --surface: #fbfcf7;
+  --ink: #0b0e0c;
+  --muted: #5f6a62;
+  --line: #cfd6cc;
+  --accent: #c43d1c;
+  --accent-bright: #ff6b3d;
+  --dark: #080b0a;
+  --light: #f4f7ef;
 }
 
 body {
@@ -36,8 +37,8 @@ body {
 }
 
 .report-home:hover {
-  background: var(--accent);
-  color: #fff;
+  background: var(--accent-bright);
+  color: var(--dark);
 }
 
 .container {
@@ -49,6 +50,7 @@ body {
 #header {
   width: 100%;
   margin-bottom: 32px;
+  border-top: 5px solid var(--accent-bright);
   background: var(--dark);
   color: var(--light);
 }
