@@ -496,13 +496,19 @@ body.cursor-light-active #cursor-light {
 .pipeline-icon {
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  overflow: hidden;
   border: 1px solid var(--line);
   background: var(--surface-2);
   color: var(--acid);
-  font-family: var(--mono);
-  font-size: 18px;
+}
+
+.pipeline-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .pipeline-step:nth-of-type(2) .pipeline-icon { color: var(--orange); }
