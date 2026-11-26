@@ -6,6 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#080b0a">
     {% seo %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://hafiz-samiullah.github.io/#person",
+            "name": "Hafiz Samiullah",
+            "url": "https://hafiz-samiullah.github.io/",
+            "jobTitle": "Machine Learning / Computer Vision Engineer",
+            "description": "Machine learning and computer vision engineer focused on deployable ML systems, model optimization, and applied research.",
+            "sameAs": [
+              "https://github.com/hafiz-samiullah",
+              "https://www.linkedin.com/in/hsamiullah/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://hafiz-samiullah.github.io/#website",
+            "url": "https://hafiz-samiullah.github.io/",
+            "name": "Hafiz Samiullah",
+            "publisher": { "@id": "https://hafiz-samiullah.github.io/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://hafiz-samiullah.github.io/#profile",
+            "url": "https://hafiz-samiullah.github.io/",
+            "mainEntity": { "@id": "https://hafiz-samiullah.github.io/#person" }
+          }
+        ]
+      }
+    </script>
     <link rel="icon" type="image/png" href="{{ "/images/urc.png" | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>

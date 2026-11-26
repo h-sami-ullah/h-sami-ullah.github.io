@@ -1,5 +1,5 @@
 title: "Hafiz Samiullah"
-description: "Machine learning and computer vision engineer focused on deployable ML systems, model optimization, and applied research."
+description: "Hafiz Samiullah is a machine learning and computer vision engineer focused on deployable ML systems, model optimization, and applied research."
 url: "https://hafiz-samiullah.github.io"
 baseurl: ""
 lang: "en-US"
@@ -8,3 +8,16 @@ github: "hafiz-samiullah"
 linkedin: "hsamiullah"
 show_downloads: false
 theme: "jekyll-theme-minimal"
+author:
+  name: "Hafiz Samiullah"
+  email: "hafizsamiullah1@gmail.com"
+  url: "https://hafiz-samiullah.github.io"
+social:
+  name: "Hafiz Samiullah"
+  links:
+    - "https://github.com/hafiz-samiullah"
+    - "https://www.linkedin.com/in/hsamiullah/"
+image: "/images/urc.png"
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
