@@ -50,11 +50,6 @@ body::before {
   display: none;
 }
 
-body,
-body * {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg transform='rotate(-30 16 16)'%3E%3Cpath d='M15 15h2v13h-2z' fill='%23c8f15a'/%3E%3Cpath d='M13 13h6l-1-4h-4z' fill='%23ff7a50'/%3E%3Cpath d='M16 2c4 5 4 9 0 12-4-3-4-7 0-12z' fill='%23fff3b0'/%3E%3C/g%3E%3C/svg%3E") 16 16, auto !important;
-}
-
 img {
   display: block;
   max-width: 100%;
