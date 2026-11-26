@@ -141,10 +141,16 @@ body.cursor-light-active #cursor-light {
   height: 88px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(126, 232, 250, .42), rgba(126, 232, 250, .12) 55%, rgba(126, 232, 250, .06));
-  box-shadow: 0 0 18px 8px rgba(126, 232, 250, .16), 0 0 44px 18px rgba(126, 232, 250, .1);
+  background: radial-gradient(circle at center,
+    rgba(126, 232, 250, .42) 0%,
+    rgba(126, 232, 250, .2) 35%,
+    rgba(126, 232, 250, .07) 68%,
+    rgba(126, 232, 250, 0) 100%);
+  box-shadow:
+    0 0 28px 12px rgba(126, 232, 250, .14),
+    0 0 70px 32px rgba(126, 232, 250, .07);
   mix-blend-mode: screen;
-  filter: blur(2px);
+  filter: blur(5px);
 }
 
 #cursor-canvas {
