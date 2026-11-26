@@ -288,12 +288,19 @@ body.cursor-light-active #cursor-light {
   align-items: start;
 }
 
+.hero-side {
+  order: 2;
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+}
+
 .hero-copy {
   order: 1;
 }
 
 .hero-panel {
-  order: 2;
   align-self: end;
 }
 
@@ -430,6 +437,166 @@ body.cursor-light-active #cursor-light {
   font-family: var(--mono);
   font-size: 10px;
   text-transform: uppercase;
+}
+
+.pipeline-viz {
+  padding: 16px;
+  border: 1px solid var(--line);
+  background: rgba(16, 21, 19, .92);
+  box-shadow: 8px 8px 0 rgba(138, 223, 240, .08);
+}
+
+.pipeline-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.pipeline-status {
+  color: var(--cyan);
+}
+
+.pipeline-status i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+}
+
+.pipeline-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 0 16px;
+}
+
+.pipeline-step {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  gap: 6px;
+  animation: pipeline-pulse 2.4s ease-in-out infinite;
+}
+
+.pipeline-step:nth-of-type(2) { animation-delay: .3s; }
+.pipeline-step:nth-of-type(3) { animation-delay: .6s; }
+.pipeline-step:nth-of-type(4) { animation-delay: .9s; }
+
+.pipeline-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--acid);
+  font-family: var(--mono);
+  font-size: 18px;
+}
+
+.pipeline-step:nth-of-type(2) .pipeline-icon { color: var(--orange); }
+.pipeline-step:nth-of-type(3) .pipeline-icon { color: var(--cyan); }
+.pipeline-step:nth-of-type(4) .pipeline-icon { color: var(--violet); }
+
+.pipeline-name {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.pipeline-connector {
+  position: relative;
+  flex: 1 1 16px;
+  height: 1px;
+  min-width: 10px;
+  background: var(--line);
+}
+
+.pipeline-connector::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 8px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 8px var(--acid);
+  animation: pipeline-flow 2.4s linear infinite;
+}
+
+.pipeline-connector:nth-of-type(2)::after { animation-delay: .8s; }
+.pipeline-connector:nth-of-type(3)::after { animation-delay: 1.6s; }
+
+.pipeline-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.pipeline-result {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: rgba(8, 11, 10, .6);
+}
+
+.pipeline-result span {
+  display: block;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.pipeline-result strong {
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pipeline-result b {
+  color: var(--acid);
+}
+
+@keyframes pipeline-pulse {
+  0%, 100% { opacity: .68; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
+
+@keyframes pipeline-flow {
+  0% { left: 0; opacity: 0; }
+  18%, 78% { opacity: 1; }
+  100% { left: calc(100% - 8px); opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .pipeline-flow {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .pipeline-connector {
+    display: none;
+  }
+
+  .pipeline-step {
+    flex: 1 1 60px;
+  }
 }
 
 .hero-panel {
@@ -1317,11 +1484,15 @@ body.cursor-light-active #cursor-light {
     order: 1;
   }
 
-  .hero-panel {
+  .hero-side {
     order: 2;
     align-self: auto;
     max-width: 620px;
     margin-top: 12px;
+  }
+
+  .hero-panel {
+    align-self: auto;
   }
 
   .section-head {

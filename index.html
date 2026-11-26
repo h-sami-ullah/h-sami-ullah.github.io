@@ -28,28 +28,68 @@ full_width: true
       </ul>
     </div>
 
-    <aside class="hero-panel" aria-label="Profile summary">
-      <div class="panel-top">
-        <span>profile.md</span>
-        <span class="panel-status"><i aria-hidden="true"></i> focused</span>
-      </div>
-      <div class="panel-body">
-        <p class="panel-label">Current focus</p>
-        <h2>Deployable vision + applied ML</h2>
-        <div class="panel-bars" aria-hidden="true">
-          <span style="--bar: 92%"></span>
-          <span style="--bar: 78%"></span>
-          <span style="--bar: 64%"></span>
-          <span style="--bar: 51%"></span>
+    <div class="hero-side">
+      <section class="pipeline-viz" aria-label="Vision pipeline preview">
+        <div class="pipeline-head">
+          <span>inference.pipeline</span>
+          <span class="pipeline-status"><i aria-hidden="true"></i> running</span>
         </div>
-        <dl class="panel-stats">
-          <div><dt>03</dt><dd>case studies</dd></div>
-          <div><dt>03</dt><dd>papers</dd></div>
-          <div><dt>05</dt><dd>reports</dd></div>
-        </dl>
-        <p class="panel-note">Target role: ML / Computer Vision Engineer</p>
-      </div>
-    </aside>
+        <div class="pipeline-flow">
+          <div class="pipeline-step">
+            <span class="pipeline-icon" aria-hidden="true">▧</span>
+            <span class="pipeline-name">image</span>
+          </div>
+          <span class="pipeline-connector" aria-hidden="true"></span>
+          <div class="pipeline-step">
+            <span class="pipeline-icon" aria-hidden="true">▦</span>
+            <span class="pipeline-name">tokens</span>
+          </div>
+          <span class="pipeline-connector" aria-hidden="true"></span>
+          <div class="pipeline-step">
+            <span class="pipeline-icon" aria-hidden="true">⇄</span>
+            <span class="pipeline-name">transformer</span>
+          </div>
+          <span class="pipeline-connector" aria-hidden="true"></span>
+          <div class="pipeline-step">
+            <span class="pipeline-icon" aria-hidden="true">◎</span>
+            <span class="pipeline-name">outputs</span>
+          </div>
+        </div>
+        <div class="pipeline-results">
+          <div class="pipeline-result">
+            <span>classification</span>
+            <strong>cat <b>0.94</b></strong>
+          </div>
+          <div class="pipeline-result">
+            <span>detection</span>
+            <strong>[x, y, w, h]</strong>
+          </div>
+        </div>
+      </section>
+
+      <aside class="hero-panel" aria-label="Profile summary">
+        <div class="panel-top">
+          <span>profile.md</span>
+          <span class="panel-status"><i aria-hidden="true"></i> focused</span>
+        </div>
+        <div class="panel-body">
+          <p class="panel-label">Current focus</p>
+          <h2>Deployable vision + applied ML</h2>
+          <div class="panel-bars" aria-hidden="true">
+            <span style="--bar: 92%"></span>
+            <span style="--bar: 78%"></span>
+            <span style="--bar: 64%"></span>
+            <span style="--bar: 51%"></span>
+          </div>
+          <dl class="panel-stats">
+            <div><dt>03</dt><dd>case studies</dd></div>
+            <div><dt>03</dt><dd>papers</dd></div>
+            <div><dt>05</dt><dd>reports</dd></div>
+          </dl>
+          <p class="panel-note">Target role: ML / Computer Vision Engineer</p>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
 
