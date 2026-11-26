@@ -551,6 +551,57 @@ body.cursor-light-active #cursor-light {
 .pipeline-connector:nth-of-type(3)::after { animation-delay: 2.6s; }
 .pipeline-connector:nth-of-type(4)::after { animation-delay: 3.6s; }
 
+.pipeline-text {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0 0 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.pipeline-text-label {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.text-chip {
+  padding: 2px 5px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: 8px;
+  animation: token-arrive 4s ease-in-out 1.6s infinite;
+}
+
+.text-chip:nth-child(3) { animation-delay: 1.7s; }
+.text-chip:nth-child(4) { animation-delay: 1.8s; }
+.text-chip:nth-child(5) { animation-delay: 1.9s; }
+
+.text-op {
+  color: var(--violet);
+  font-family: var(--mono);
+  font-size: 8px;
+  animation: layer-pulse 4s ease-in-out 2.1s infinite;
+}
+
+.text-merge {
+  color: var(--acid);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 700;
+  animation: layer-pulse 4s ease-in-out 2.4s infinite;
+}
+
+.cls-token {
+  animation: layer-pulse 4s ease-in-out 1s infinite;
+}
+
 .pipeline-results {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
