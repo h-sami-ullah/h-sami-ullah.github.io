@@ -58,7 +58,6 @@
   });
 
   function initScrollUI() {
-    const progressBar = document.querySelector('.scroll-progress span');
     const nav = document.querySelector('.nav');
     const navLinks = Array.from(document.querySelectorAll('.nav-links a[href*="#"]'));
     const linksById = {};
@@ -76,16 +75,11 @@
       }
     });
 
-    if (!progressBar && sections.length === 0) return;
+    if (sections.length === 0) return;
 
     let ticking = false;
 
     function update() {
-      const doc = document.documentElement;
-      const maxScroll = doc.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
-      if (progressBar) progressBar.style.transform = 'scaleX(' + progress + ')';
-
       const offset = (nav ? nav.offsetHeight : 0) + 24;
       let activeId = null;
       sections.forEach(function (section) {
