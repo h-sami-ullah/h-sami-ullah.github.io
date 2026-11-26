@@ -22,10 +22,10 @@
     - "Bitbucket Pipelines"
   links:
     - label: "View repository"
-      url: "https://github.com/h-sami-ullah/training-universe"
+      url: "https://github.com/hafiz-samiullah/training-universe"
       primary: true
     - label: "Documentation"
-      url: "https://github.com/h-sami-ullah/training-universe/tree/main"
+      url: "https://github.com/hafiz-samiullah/training-universe/tree/main"
 
 - title: "Product Classifier Optimization"
   label: "Model deployment and optimization"
@@ -67,10 +67,10 @@
     - "ONNX Runtime"
   links:
     - label: "View repository"
-      url: "https://github.com/h-sami-ullah/classifier-optimization"
+      url: "https://github.com/hafiz-samiullah/classifier-optimization"
       primary: true
     - label: "Documentation"
-      url: "https://github.com/h-sami-ullah/classifier-optimization/tree/main/docs"
+      url: "https://github.com/hafiz-samiullah/classifier-optimization/tree/main/docs"
 
 - title: "Scene Recognition with Bag-of-Words"
   label: "Computer vision research"
