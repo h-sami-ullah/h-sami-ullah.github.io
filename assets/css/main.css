@@ -37,6 +37,20 @@ body {
   line-height: 1.65;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 130;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(244, 247, 239, .1) 1px, transparent 1px),
+    linear-gradient(rgba(244, 247, 239, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 247, 239, .025) 1px, transparent 1px);
+  background-size: 8px 8px;
+  opacity: .5;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -110,14 +124,21 @@ body.cursor-light-active #cursor-light {
 }
 
 #cursor-light::before {
-  background: radial-gradient(circle 760px at var(--torch-x, 50%) var(--torch-y, 50%), transparent 0%, rgba(3, 5, 4, .14) 42%, rgba(3, 5, 4, .58) 100%);
+  background: rgba(3, 5, 4, .38);
   mix-blend-mode: multiply;
 }
 
 #cursor-light::after {
-  background: radial-gradient(circle 240px at var(--torch-x, 50%) var(--torch-y, 50%), rgba(255, 255, 228, .42) 0%, rgba(200, 241, 90, .26) 42%, rgba(200, 241, 90, .06) 76%, transparent 100%);
+  inset: auto;
+  left: var(--torch-x, 50%);
+  top: var(--torch-y, 50%);
+  width: min(520px, 78vw);
+  height: min(520px, 78vw);
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, rgba(255, 255, 228, .34), rgba(200, 241, 90, .18) 55%, rgba(200, 241, 90, .06));
+  box-shadow: 0 0 60px 30px rgba(200, 241, 90, .12), 0 0 140px 70px rgba(255, 255, 228, .08);
   mix-blend-mode: color-dodge;
-  filter: blur(7px);
+  filter: blur(9px);
 }
 
 #cursor-canvas {
