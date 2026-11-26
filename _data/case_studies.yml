@@ -1,3 +1,56 @@
+- title: "LLM Inference Optimization Benchmark"
+  label: "LLM serving / inference"
+  year: "2026"
+  summary: "Benchmarking Qwen 2.5 3B inference on one 16 GB T4 across TTFT, throughput, and memory."
+  detail: "Built a reusable Python benchmark package with online vLLM server and offline LLM.generate paths, then measured HuggingFace baseline, FP16 vLLM, AWQ, Flash Attention, prefix caching, speculative decoding, and the combined stack under a fixed GPU budget."
+  media_type: "benchmark"
+  benchmark_title: "Throughput comparison / tokens per second"
+  benchmark_note: "Prefix caching wins on shared prompts; AWQ gives the largest single gain with lower memory. Speculative decoding needs a better-matched draft model."
+  facts:
+    - value: "371 TPS"
+      label: "peak warm-cache throughput"
+    - value: "39.5 ms"
+      label: "lowest TTFT"
+    - value: "16 GB"
+      label: "T4 memory budget"
+  benchmarks:
+    - label: "HuggingFace baseline"
+      width: 20
+      time: "72.6 TPS / 74.4 ms"
+    - label: "vLLM FP16"
+      width: 32
+      time: "120.6 TPS / 78.3 ms"
+    - label: "vLLM + AWQ"
+      width: 73
+      time: "271.8 TPS / 43.4 ms"
+    - label: "AWQ + Flash Attention"
+      width: 64
+      time: "237.3 TPS / 39.5 ms"
+    - label: "Prefix cache (warm)"
+      width: 100
+      time: "371.2 TPS / 55.3 ms"
+    - label: "AWQ + speculative"
+      width: 26
+      time: "98.1 TPS / 311.9 ms"
+    - label: "Combined stack"
+      width: 28
+      time: "102.7 TPS / 320.9 ms"
+  tech:
+    - "Python"
+    - "vLLM"
+    - "AWQ"
+    - "Flash Attention"
+    - "Qwen 2.5"
+    - "OpenAI API"
+    - "CUDA"
+    - "Jupyter"
+  links:
+    - label: "View repository"
+      url: "https://github.com/hafiz-samiullah/llm-inference-benchmark"
+      primary: true
+    - label: "Benchmark results"
+      url: "https://github.com/hafiz-samiullah/llm-inference-benchmark#results"
+
 - title: "Geo-Busyness Predictor"
   label: "Production ML pipeline"
   year: "2024"
@@ -33,6 +86,8 @@
   summary: "Optimizing a ResNet18 product classifier for low-latency deployment with PyTorch, ONNX, pruning, and quantization."
   detail: "Benchmarked FP32, pruned, static INT8, and quantization-aware training paths, then compared accuracy, model size, latency, and throughput under ONNX Runtime."
   media_type: "benchmark"
+  benchmark_title: "Latency comparison / per image"
+  benchmark_note: "QAT INT8 keeps the highest accuracy while static INT8 ONNX gives the lowest latency."
   facts:
     - value: "3.4ms"
       label: "best per-image latency"

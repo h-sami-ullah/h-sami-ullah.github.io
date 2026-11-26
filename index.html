@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Hafiz Samiullah — ML and Computer Vision Engineer"
-description: "Hafiz Samiullah is a machine learning and computer vision engineer building deployable ML systems, optimized models, and applied research tools."
+description: "Hafiz Samiullah is a machine learning, computer vision, and LLM inference engineer building deployable ML systems, optimized models, and applied research tools."
 full_width: true
 ---
 
@@ -12,9 +12,9 @@ full_width: true
       <h1>Hafiz<br><span>Samiullah.</span></h1>
       <p class="hero-lede">Machine-learning systems that leave the notebook.</p>
       <p class="hero-text">
-        I build geospatial prediction models, optimize vision models for real latency budgets,
-        and publish applied research. The work is equal parts experimentation, engineering,
-        and making the result usable.
+        I build geospatial prediction models, optimize vision and language models for real
+        latency budgets, and publish applied research. The work is equal parts experimentation,
+        engineering, and making the result usable.
       </p>
       <div class="hero-actions">
         <a class="button button-acid" href="#work">Explore the work</a>
@@ -23,6 +23,7 @@ full_width: true
       <ul class="hero-chips" aria-label="Core areas">
         <li>Geospatial ML</li>
         <li>ONNX Optimization</li>
+        <li>LLM Serving</li>
         <li>Computer Vision</li>
         <li>Applied Research</li>
       </ul>
@@ -231,7 +232,7 @@ full_width: true
         <p class="section-number">01 / Selected work</p>
         <h2>Built, benchmarked,<br>and shipped.</h2>
       </div>
-      <p>Three projects with a clear problem, real engineering decisions, and outcomes I can explain in an interview.</p>
+      <p>Four projects with a clear problem, real engineering decisions, and outcomes I can explain in an interview.</p>
     </div>
 
     <div class="case-stack">
@@ -278,7 +279,7 @@ full_width: true
           <div class="case-media">
             {% if case.media_type == "benchmark" %}
             <div class="benchmark-panel">
-              <p class="benchmark-title">Latency comparison / per image</p>
+              <p class="benchmark-title">{{ case.benchmark_title | default: "Latency comparison / per image" }}</p>
               <div class="benchmark-rows">
                 {% for row in case.benchmarks %}
                 <div class="benchmark-row">
@@ -288,7 +289,7 @@ full_width: true
                 </div>
                 {% endfor %}
               </div>
-              <p class="benchmark-note">QAT INT8 keeps the highest accuracy while static INT8 ONNX gives the lowest latency.</p>
+              <p class="benchmark-note">{{ case.benchmark_note | default: "QAT INT8 keeps the highest accuracy while static INT8 ONNX gives the lowest latency." }}</p>
             </div>
             {% else %}
             <img src="{{ case.image | relative_url }}" alt="{{ case.image_alt }}" loading="lazy">
