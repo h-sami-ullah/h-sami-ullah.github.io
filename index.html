@@ -1,29 +1,29 @@
 ---
 layout: default
 title: "Hafiz Samiullah — ML and Computer Vision Engineer"
-description: "Hafiz Samiullah is a machine learning, computer vision, and LLM inference engineer building deployable ML systems, optimized models, and applied research tools."
+description: "Hafiz Samiullah is a lead machine learning developer with 8 years deploying ML systems across computer vision, NLP, RAG, and LLM inference."
 full_width: true
 ---
 
 <section class="hero" id="about" data-cursor-surface>
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span>ML / CV Engineer &middot; Research &rarr; Deployment</p>
+      <p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span>Lead ML Developer &middot; 8 Years &middot; Calgary, AB</p>
       <h1>Hafiz<br><span>Samiullah.</span></h1>
-      <p class="hero-lede">Machine-learning systems that leave the notebook.</p>
+      <p class="hero-lede">ML systems that ship &mdash; from research to low-latency serving.</p>
       <p class="hero-text">
-        I build geospatial prediction models, optimize vision and language models for real
-        latency budgets, and publish applied research. The work is equal parts experimentation,
-        engineering, and making the result usable.
+        I lead ML teams and own end-to-end lifecycles across computer vision, NLP, RAG, and
+        generative AI: data pipelines, distributed training, low-latency serving on cloud and
+        edge, and the MLOps to keep it reliable.
       </p>
       <div class="hero-actions">
         <a class="button button-acid" href="#work">Explore the work</a>
         <a class="button button-line" href="mailto:{{ site.email }}">Start a conversation</a>
       </div>
       <ul class="hero-chips" aria-label="Core areas">
-        <li>Geospatial ML</li>
-        <li>ONNX Optimization</li>
+        <li>RAG &amp; Agents</li>
         <li>LLM Serving</li>
+        <li>MLOps / Kubernetes</li>
         <li>Computer Vision</li>
         <li>Applied Research</li>
       </ul>
@@ -302,11 +302,40 @@ full_width: true
   </div>
 </section>
 
+<section class="section section-experience" id="experience" data-cursor-surface>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="section-number">02 / Experience</p>
+        <h2>Eight years<br>shipping ML.</h2>
+      </div>
+      <p>Leadership, applied research, and production ownership across finance, agronomy, and edge vision.</p>
+    </div>
+
+    <div class="experience-list">
+      {% for job in site.data.experience %}
+      <article class="experience-row">
+        <p class="experience-period">{{ job.period }}</p>
+        <div>
+          <h3 class="experience-role">{{ job.role }}</h3>
+          <p class="experience-org">{{ job.org }}</p>
+          <ul class="experience-highlights">
+            {% for highlight in job.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="section section-reports" id="reports" data-cursor-surface>
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="section-number">02 / Written reports</p>
+        <p class="section-number">03 / Written reports</p>
         <h2>Computer vision,<br>without the hand-waving.</h2>
       </div>
       <p>Full write-ups with methods, figures, results, and discussion — hosted here instead of buried in a repository.</p>
@@ -335,7 +364,7 @@ full_width: true
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="section-number">03 / Project archive</p>
+        <p class="section-number">04 / Project archive</p>
         <h2>More builds.<br>Fewer buzzwords.</h2>
       </div>
       <p>A compact archive of forecasting, vision, signal processing, and power systems work.</p>
@@ -387,7 +416,7 @@ full_width: true
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="section-number">04 / Publications</p>
+        <p class="section-number">05 / Publications</p>
         <h2>Peer-reviewed<br>and citable.</h2>
       </div>
       <p>Published work in agricultural AI, computer vision, and multimodal anomaly detection.</p>
@@ -412,7 +441,7 @@ full_width: true
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="section-number">05 / Toolkit</p>
+        <p class="section-number">06 / Toolkit</p>
         <h2>What I actually<br>work with.</h2>
       </div>
       <p>Grouped by use case, not dumped as a keyword wall.</p>
@@ -436,9 +465,9 @@ full_width: true
 <section class="contact-band" id="contact" data-cursor-surface>
   <div class="container contact-grid">
     <div>
-      <p class="section-number">06 / Contact</p>
+      <p class="section-number">07 / Contact</p>
       <h2>Give me a hard problem.</h2>
-      <p>I am interested in ML engineering, computer vision, and applied research work where experimentation and deployment both matter.</p>
+      <p>Based in Calgary, AB. Interested in ML leadership, applied research, and production AI roles where experimentation and deployment both matter.</p>
     </div>
     <div class="contact-links">
       <a class="button button-acid" href="mailto:{{ site.email }}">Email me</a>

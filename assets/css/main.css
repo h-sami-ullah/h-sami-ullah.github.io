@@ -1654,6 +1654,54 @@ body.cursor-light-active #cursor-light {
   color: var(--acid);
 }
 
+.experience-list {
+  border-top: 2px solid var(--acid);
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-period {
+  margin: 0;
+  color: var(--acid);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.experience-role {
+  margin: 0 0 4px;
+  font-family: var(--display);
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+
+.experience-org {
+  margin: 0 0 12px;
+  color: var(--cyan);
+  font-size: 13px;
+}
+
+.experience-highlights {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.experience-highlights li + li {
+  margin-top: 6px;
+}
+
 @media (max-width: 1120px) {
   .hero-grid {
     gap: 36px;
@@ -1726,6 +1774,11 @@ body.cursor-light-active #cursor-light {
     grid-column: 2;
     justify-self: start;
     text-align: left;
+  }
+
+  .experience-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .contact-grid {

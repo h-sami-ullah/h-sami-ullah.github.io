@@ -1,0 +1,71 @@
+- period: "Nov 2026 — Present"
+  role: "Lead Machine Learning Developer"
+  org: "RBC Borealis · Calgary, AB"
+  highlights:
+    - "Lead quarterly sprint planning and guide junior engineers."
+    - "Built a RAG Slack support bot with LangChain, LangGraph, guardrails, Jira Service Desk integration, and RAGAS evaluation."
+    - "Optimizing LLM serving with vLLM quantization, continuous batching, and prefix caching."
+
+- period: "Nov 2025 — Nov 2026"
+  role: "Machine Learning Software Engineer II"
+  org: "RBC Borealis · Calgary, AB"
+  highlights:
+    - "Owned ML developer experience on Run:ai across interactive experimentation, distributed training, and multi-GPU hosting."
+    - "Built an MCP interface for platform diagnostics and assistant-driven workload debugging."
+
+- period: "Oct 2025 — Nov 2025"
+  role: "Senior ML Optimization Engineer"
+  org: "Augmodo · Remote"
+  highlights:
+    - "Cut production detection latency by 33%."
+    - "Packaged and validated optimized models for NVIDIA Triton Inference Server."
+
+- period: "Feb 2025 — Oct 2025"
+  role: "Senior AI Engineer"
+  org: "Precision AI · Edmonton, AB"
+  highlights:
+    - "Designed an agentic RAG system with SQL grounding and near-zero hallucination for agronomy decision support."
+    - "Reduced stand-count MAE from 15 to 2.4 and deployed the vision pipeline to production."
+    - "Built data-quality pipelines and owned CI/CD with Docker, Kubernetes, and AWS."
+
+- period: "Nov 2023 — Jan 2025"
+  role: "Associate AI Engineer"
+  org: "Precision AI · Edmonton, AB"
+  highlights:
+    - "Cut cloud data-lake query latency by 50% and data scanned by 70%."
+    - "Built reproducible CI/CD for training, versioned artifacts, and automated promotion."
+    - "Shipped JWT-authorized ML APIs for internal and external consumers."
+
+- period: "Dec 2021 — Oct 2023"
+  role: "Machine Learning Engineer"
+  org: "Precision AI · Edmonton, AB"
+  highlights:
+    - "Deployed production models with SageMaker, PyTorch, and TensorFlow, improving accuracy by 15%."
+    - "Reduced operational cost 25% and raised production efficiency 30% through MLOps."
+    - "Deployed optimized models to NVIDIA Jetson for low-latency edge inference."
+
+- period: "Sep 2019 — Jan 2022"
+  role: "Machine Learning Researcher"
+  org: "University of Regina · Regina, SK"
+  highlights:
+    - "Built real-time crop and weed semantic segmentation with industry partners."
+    - "Cut memory 91 MB, parameters 22M, and FLOPs 116B with under 1% accuracy loss."
+
+- period: "Nov 2017 — Aug 2019"
+  role: "Machine Learning Scientist"
+  org: "Data Sciences Lab, UET · Lahore, Punjab"
+  highlights:
+    - "Built semi-supervised audio and video anomaly detection using SVM and Social Force Models."
+    - "Developed an end-to-end CNN pipeline for brain tumor detection."
+
+- period: "2019 — 2021"
+  role: "MSc Electronic Systems Engineering"
+  org: "University of Regina · Deep Learning and Computer Vision"
+  highlights:
+    - "Dean's Honor List, two teaching assistantships, and UR Graduate Scholarships."
+
+- period: "2014 — 2018"
+  role: "BSc Electrical Engineering"
+  org: "University of Engineering & Technology, Lahore"
+  highlights:
+    - "Three gold medals for best performance; top in batch six times."

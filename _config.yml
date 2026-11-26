@@ -1,16 +1,17 @@
 title: "Hafiz Samiullah"
-description: "Hafiz Samiullah is a machine learning, computer vision, and LLM inference engineer focused on deployable ML systems, model optimization, and applied research."
+description: "Hafiz Samiullah is a lead machine learning developer with 8 years deploying ML systems across computer vision, NLP, RAG, and LLM inference."
 url: "https://hafiz-samiullah.github.io"
 baseurl: ""
 lang: "en-US"
-email: "hafizsamiullah1@gmail.com"
+email: "csamiullah9@gmail.com"
+location: "Calgary, AB"
 github: "hafiz-samiullah"
 linkedin: "hsamiullah"
 show_downloads: false
 theme: "jekyll-theme-minimal"
 author:
   name: "Hafiz Samiullah"
-  email: "hafizsamiullah1@gmail.com"
+  email: "csamiullah9@gmail.com"
   url: "https://hafiz-samiullah.github.io"
 social:
   name: "Hafiz Samiullah"
