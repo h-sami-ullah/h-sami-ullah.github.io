@@ -57,6 +57,60 @@
     });
   });
 
+  function initScrollUI() {
+    const progressBar = document.querySelector('.scroll-progress span');
+    const nav = document.querySelector('.nav');
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a[href*="#"]'));
+    const linksById = {};
+    const sections = [];
+    const pagePath = window.location.pathname.replace(/\/$/, '');
+
+    navLinks.forEach(function (link) {
+      const url = new URL(link.href, window.location.href);
+      if (url.pathname.replace(/\/$/, '') !== pagePath) return;
+      const id = decodeURIComponent(url.hash.slice(1));
+      const section = id ? document.getElementById(id) : null;
+      if (section) {
+        linksById[id] = link;
+        sections.push(section);
+      }
+    });
+
+    if (!progressBar && sections.length === 0) return;
+
+    let ticking = false;
+
+    function update() {
+      const doc = document.documentElement;
+      const maxScroll = doc.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+      if (progressBar) progressBar.style.transform = 'scaleX(' + progress + ')';
+
+      const offset = (nav ? nav.offsetHeight : 0) + 24;
+      let activeId = null;
+      sections.forEach(function (section) {
+        if (section.getBoundingClientRect().top <= offset) activeId = section.id;
+      });
+
+      navLinks.forEach(function (link) {
+        link.classList.remove('active');
+      });
+      if (activeId && linksById[activeId]) linksById[activeId].classList.add('active');
+      ticking = false;
+    }
+
+    function requestUpdate() {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    update();
+  }
+
   function initCursorEffects() {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -136,5 +190,6 @@
     requestAnimationFrame(draw);
   }
 
+  initScrollUI();
   initCursorEffects();
 })();
